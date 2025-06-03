@@ -1,10 +1,64 @@
 /* TYPOGRAPHY */
 /* ___________________________________ */
 
+/* QUICKSAND */
+@import url("https://use.typekit.net/fvi8uiw.css");
+
+/* font-family: "quicksand",
+sans-serif; */
+
+
+/* Georgia pro */
+@import url("https://use.typekit.net/fvi8uiw.css");
+
+/* font-family: "georgiapro",
+sans-serif; */
 
 
 /* VARIABLES */
 /* ___________________________________ */
+
+:root{
+    /* farver */
+    --blue: #255885;
+    --green: #018475;
+    --font: #1e1e1e;
+
+
+    /* skrift størrelser */
+    --fs_h1_desktop: 3.25rem; 
+    --fs_h2_desktop: 2.5rem;
+    --fs_h3_desktop: 1.5rem;
+    --p_desktop: 1.375rem;
+    --bullets_desktop: 1rem;
+    --accordium_desktop: 2rem;
+    --card_button_text_desktop: 1.25rem;
+
+    --fs_h1_mobile: 1.375rem;
+    --fs_h2_mobile: 1.125rem;
+    --fs_h3_mobile: 1rem;
+    --p_mobile: 1rem;
+    --bullets_mobile: 0.9375rem;
+    --accordium_mobile: 0.8125rem;
+    --card_button_text_mobile: 0.75rem;
+
+
+    /* spacere */
+    --sektion_spacer_desktop: 6.25rem;
+    --text_spacer_desktop: 1.875rem;
+
+    --sektion_spacer_mobile: 3.125rem;
+    --text_spacer_mobile: 0.9375rem;
+
+
+
+
+
+}
+
+
+
+
 
 
 
@@ -15,4 +69,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "georgiapro", sans-serif;
+    margin-bottom: var(--text_spacer_desktop);
+}
+
+p {
+    font-family: "quicksand", sans-serif;
+    line-height: 150%;
+    margin-bottom: var(--text_spacer_desktop);
+}
+
+h1{
+    margin-block: var(--sektion_spacer_desktop);
+    text-align: center;
+
 }
