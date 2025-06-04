@@ -1,7 +1,8 @@
 
 
-
+//
 //JS Accordion
+//
 // rammer alle med querySelectorAll med class accordion .forEach loop kører for hver knap/button tilføjes en EventListener der lytter efter klik på button.//
 document.querySelectorAll(".accordion").forEach(button => {
     button.addEventListener("click", ()=>{
