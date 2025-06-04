@@ -25,6 +25,7 @@ sans-serif; */
     --blue: #255885;
     --green: #018475;
     --font: #1e1e1e;
+    --accordionbackground: white;
 
 
     /* skrift størrelser */
@@ -3104,7 +3105,81 @@ h1 {
 
 /* PRAKTISK INFORMATION STYLES HER */
 
+/*sætter indholdet af accodions til ikke at være synligt med display none*/
+.accordion-content {
+    display: none;
+    background-color: var(--accordionbackground);
+    border: solid 1px black;
+}
 
+/*class =open der i JS bliver tilføjet ved klik på knappen. Så denne CSS regel gælder for en button/knap med begge class*/
+.accordion-content.open {
+    display: block;
+}
+
+/*tilføjer en pointer så der kommer en hånd frem, når man hover over knappen*/
+.accordion {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+    height: 2.8rem;
+    font-size: 0.8125rem;
+    display: flex;
+    border: solid 1px black;
+    padding: var(--text_spacer_mobile);
+    font-weight: var(--fs_semibold);
+    font-family:"georgiapro", sans-serif;
+}
+
+.accordion-content p {
+    margin-top: 0;
+    padding: 1rem;
+}
+/*skal laves om til main*/
+.accordion-section {
+    margin: 1.875rem;
+}
+
+/*ved at vælge sektionen og den første knap i sektionen, tilføjes der runde kanter i toppen*/
+.accordion-section button:first-of-type {
+    border-top-left-radius: var(--border_radius_buttons);
+    border-top-right-radius: var(--border_radius_buttons);
+}
+
+/*ved at vælge sektionen og den sidste knap i sektionen, tilføjes der runde kanter i toppen*/
+.accordion-section button:last-of-type {
+    border-bottom-left-radius: var(--border_radius_buttons);
+    border-bottom-right-radius: var(--border_radius_buttons);
+}
+
+/*fjerner de runde kanter når accordion åbnes*/
+.accordion-section button.open:last-of-type {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+@media screen and (min-width: 00px) {
+/*Generel styling*/
+
+    main {
+    margin-left: 15.625rem;
+    margin-right: 15.625rem;
+    }
+
+    p {
+        font-size: var(--p_desktop);
+    }
+
+/*Praktisk Information - accordin*/
+    .accordion {
+        height: 4.875rem;
+        font-size: var(--accordium_desktop);
+        padding: var(--text_spacer_desktop);
+    }
+}
 
 
 
