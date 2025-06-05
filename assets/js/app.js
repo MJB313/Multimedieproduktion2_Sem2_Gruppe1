@@ -1,4 +1,16 @@
 
+//Hent data med API
+const domain ="https://mmd2.jqt-website.com/";
+const postsEndpoint = "wp-json/wp/v2/posts";
+const getRealImageUrls = "&acf_format=standard";
+
+async function getData(){
+    const res =await fetch(domain +postsEndpoint);
+    const dataWordpress = await res.json();
+    console.log('dataWordpress:', dataWordpress)
+    return dataWordpress;
+}
+getData();
 
 //
 //JS Accordion
