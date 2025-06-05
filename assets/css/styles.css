@@ -472,8 +472,10 @@ ul.breadcrumb li a {
     font-weight: var(--fs_bold);
 }
 
-.card p:nth-last-child {
+
+.card p {
     font-size: var(--p_desktop);
+    margin-bottom: 1rem;
 }
 
 .card_wrapper {
