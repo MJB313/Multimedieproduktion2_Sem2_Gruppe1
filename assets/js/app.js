@@ -7,10 +7,53 @@ const getRealImageUrls = "&acf_format=standard";
 async function getData(){
     const res =await fetch(domain +postsEndpoint);
     const dataWordpress = await res.json();
-    console.log('dataWordpress:', dataWordpress)
+    // console.log('dataWordpress:', dataWordpress)
     return dataWordpress;
 }
 getData();
+
+
+// //Sætte hentet data ind i DOM på MINIGOLF siden
+// const AktivitetIndhold = document.querySelector(".Aktivitet-indhold")
+// function renderActivities (dataWordpress){
+//     if(Array.isArray(dataWordpress)){
+//         dataWordpress.forEach(post => {
+//             AktivitetIndhold.innerHTML += `
+//           <h1 class="overskrift">${post.acf.titel}</h1>
+//           <img src="${post.acf.sektion_1.billede_desktop.url}" alt="">
+//           <p class="beskrivelse">${post.acf.sektion_1.beskrivelse}</p>
+//         `
+//         })
+//     }
+// }
+// async function init() {
+
+//     const data = await getData()
+//     renderActivities(data);
+
+// }
+// init()
+
+
+//Sætte hentet data ind i DOM på MINIGOLF siden
+const AktivitetIndhold = document.querySelector(".Aktivitet-indhold")
+function renderActivities(data) {
+    const activite =data[6];
+        AktivitetIndhold.innerHTML += `
+          <h1 class="overskrift">${activite.acf.titel}</h1>
+          <img src="${activite.acf.sektion_1.billede_desktop.url}" alt="">
+          <p class="beskrivelse">${activite.acf.sektion_1.beskrivelse}</p>
+        `
+}
+async function init() {
+
+    const data = await getData()
+    renderActivities(data);
+
+}
+init()
+
+//kan vi indsætte alt data evt med en for loop if key = sektion. 
 
 //
 //JS Accordion

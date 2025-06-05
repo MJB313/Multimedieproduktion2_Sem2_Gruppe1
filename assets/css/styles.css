@@ -3196,9 +3196,16 @@ h1 {
             padding: var(--text_spacer_desktop);   }
 }
 
-
-
-
+/**/
+/*footer*/
+/**/
+footer{
+    background-color: var(--blue);
+    color: white;
+}
+.DCUsvg{
+    width: 62px ;
+}
 
 
 
