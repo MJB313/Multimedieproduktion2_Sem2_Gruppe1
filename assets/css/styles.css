@@ -104,12 +104,55 @@ h1 {
 
 
 /* FORSIDE KODES HER */
+.heroBillede{
+    width: 100%;
+    /*giver billedet en højde på 600px på desktop, men stadig responsivt end hvis man kun havde sat højde til 600px.*/
+    max-height: 90vh;
+    /*anvender object-fit for at få billedet til at fylde hele container ud, sættes til cover, da den skal dække det hele*/
+    object-fit: cover;
+    /*object position bruges til at fortælle hvilken del af billedet der skal vises. Her gerne det nederste af billedet, så vi kan se børnene*/
+    object-position: center bottom;
+    position: relative;
+    
+}
 
+.h1HeroForside{
+    color: white;
+    font-size: 4rem;
+    font-style: italic;
+    position: absolute;
+    /*fortæller hvor teksten skal placers henne i forhold til Herobillede */
+    top: 0%;
+    left: 13%
+}
 
+.pHeroForside{
+    color: white;
+    font-size: 2.5rem;
+    font-style: italic;
+    position: absolute;
+    top: 25%;
+    left: 13%;
+}
+.containerHeroImage{
+   /* height: 600px; */
+}
 
+@media screen and (max-width: 1000px) {
+    .h1HeroForside {
+            color: white;
+            font-size: 1.375rem;
+            /*fortæller hvor teksten skal placers henne i forhold til Herobillede */
+            top: -5%;
+            left: 13%   
+        }
 
-
-
+     .pHeroForside {
+            font-size: 0.875rem;
+            top: 10%;
+            left: 13%;       
+        }
+}
 
 
 
