@@ -25,6 +25,7 @@ sans-serif; */
     --blue: #255885;
     --green: #018475;
     --font: #1e1e1e;
+    --accordionbackground: white;
 
 
     /* skrift størrelser */
@@ -3104,13 +3105,156 @@ h1 {
 
 /* PRAKTISK INFORMATION STYLES HER */
 
+/*sætter indholdet af accodions til ikke at være synligt med display none*/
+.accordion-content {
+    display: none;
+    background-color: var(--accordionbackground);
+    border: solid 1px black;
+}
 
+/*class =open der i JS bliver tilføjet ved klik på knappen. Så denne CSS regel gælder for en button/knap med begge class*/
+.accordion-content.open {
+    display: block;
+    
+}
 
+/*tilføjer en pointer så der kommer en hånd frem, når man hover over knappen*/
+.accordion {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D9D9;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+    height: 2.8rem;
+    font-size: var(--accordium_mobile);
+    display: flex;
+    border: solid 1px black;
+    padding: var(--text_spacer_mobile);
+    font-weight: var(--fs_semibold);
+    font-family:"georgiapro", sans-serif;
+    
+}
+.accordion:hover{
+    background-color: grey;
+}
+.accordion-content p {
+    margin-top: 0;
+    padding: var(--text_spacer_mobile);
+}
+/*skal laves om til main*/
+.accordion-section {
+    margin: 1.875rem;
+}
 
+/*ved at vælge sektionen og den første knap i sektionen, tilføjes der runde kanter i toppen*/
+.accordion-section button:first-of-type {
+    border-top-left-radius: var(--border_radius_buttons);
+    border-top-right-radius: var(--border_radius_buttons);
+}
 
+/*ved at vælge sektionen og den sidste knap i sektionen, tilføjes der runde kanter i toppen*/
+.accordion-section button:last-of-type {
+    border-bottom-left-radius: var(--border_radius_buttons);
+    border-bottom-right-radius: var(--border_radius_buttons);
+}
 
+/*fjerner de runde kanter når accordion åbnes*/
+.accordion-section button.open:last-of-type {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+/*Tilføjet funktionel animation, pilen her vores i for tilføjet class open med js, da den er inden i .accordion, vi beder dem om at rotere 90 grader så den peger til siden*/
+.accordion.open i{
+    transform: rotate(-90deg);
+}
+/*ikonet bevæger sig med 0.3 sekunder så det bliver en mere blød  overgang*/
+.accordion i{
+    transition: transform 0.3s;
+}
 
+@media screen and (min-width: 1000px) {
+/*Generel styling*/
 
+    main {
+    margin-left: 15.625rem;
+    margin-right: 15.625rem;
+    }
+
+    p {
+        font-size: var(--p_desktop);
+    }
+
+/*Praktisk Information - accordion*/
+    .accordion {
+        height: 4.875rem;
+        font-size: var(--accordium_desktop);
+        padding: var(--text_spacer_desktop);
+    }
+
+        .accordion-content p {
+            padding: var(--text_spacer_desktop);   }
+}
+
+/**/
+/*footer*/
+/**/
+footer{
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: var(--text_spacer_desktop);
+}
+footer p{
+    font-size: var(--p_desktop);
+}
+.DCUsvg{
+    width: 3rem;
+}
+.fa-facebook-f{
+    color: white;
+    font-size: 3rem;
+    padding-left: 1rem;
+    padding-top: 0;
+}
+.weather{
+    display: flex;
+    gap: 1rem;
+    
+}
+.linkfooter{
+    gap: 1rem;
+}
+.bold{
+    font-weight: var(--fs_bold);
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.Kontakt i{
+    padding-right: 0.5rem;
+}
+.linkfooter{
+    display: flex;
+    align-items: stretch;
+}
+
+@media screen and (max-width: 1000px) {
+    footer p{
+        font-size: var(--p_mobile);
+    }
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
 
 
