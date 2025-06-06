@@ -465,7 +465,8 @@ ul.breadcrumb li a {
 }
 
 .card {
-    width: 347px;
+    width: 100%;
+    align-items: center;
 }
 
 .card_title {
