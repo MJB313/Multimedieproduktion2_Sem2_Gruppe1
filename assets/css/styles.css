@@ -87,7 +87,8 @@ h6 {
     margin-bottom: var(--text_spacer_desktop);
 }
 
-p {
+p,
+a {
     font-family: "quicksand", sans-serif;
     font-weight: var(--fs_medium);
     line-height: 150%;
@@ -2204,11 +2205,165 @@ h1 {
 
 /* OVERNATNING KODES HER */
 
+main {
+    margin-inline: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.button-link {
+    background-color: var(--green);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: white;
+    border-radius: var(--border_radius_buttons);
+    padding: 0.5rem 1rem;
+    max-width: 254px;
+    margin: 1rem 0 auto;
+    font-size: var(--card_button_text_mobile);
+}
+
+.card {
+    width: 100%;
+    align-items: center;
+}
+
+.card_title {
+    font-size: var(--fs_h3_mobile);
+    font-weight: var(--fs_bold);
+}
+
+.card i {
+    font-size: 1rem;
+    width: 25px;
+    margin-bottom: 0.25rem;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+}
 
 
 
+.card p {
+    font-size: var(--p_mobile);
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+}
 
 
+.card_wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--sektion_spacer_mobile);
+}
+
+.hytte_preview img {
+    width: 100%;
+    height: 330px;
+}
+
+.hytte_preview {
+    display: block; 
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: white;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.buttonClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer; }
+
+.hytte_preview img {
+    object-fit: cover;
+}
+
+.card a {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    /* fjern dette efter modal er færdiglavet*/
+}
+
+
+@media screen and (min-width: 999px) {
+    
+    main {
+        margin-inline: 250px;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 381px;
+        object-fit: cover;
+    }
+    
+    .button-link {
+        background-color: var(--green);
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        color: white;
+        border-radius: var(--border_radius_buttons);
+        padding: 0.5rem 1rem;
+        font-size: var(--card_button_text_desktop);
+        max-width: 100%;
+    }
+    
+    .card {
+        width: 347px;
+    }
+    
+    .card_title {
+        font-size: var(--fs_h3_desktop);
+        font-weight: var(--fs_bold);
+    }
+
+    .card i {
+        font-size: 2rem;
+        width: 20px;
+    }
+
+    .icon-text {
+        display: flex;
+        align-items: center;
+        gap: 1rem;   }
+    
+    
+    .card p {
+        font-size: var(--p_desktop);
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+    
+    .card_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--sektion_spacer_desktop)
+    }
+    
+    .card a {
+        margin-bottom: 1rem; /* fjern dette efter modal er færdiglavet*/
+    }
+}
 
 
 
