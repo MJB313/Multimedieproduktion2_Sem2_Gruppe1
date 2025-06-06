@@ -104,6 +104,13 @@ h1 {
 
 
 /* FORSIDE KODES HER */
+/*NAV*/
+
+
+
+
+
+/*header*/
 .heroBillede{
     width: 100%;
     /*giver billedet en højde på 600px på desktop, men stadig responsivt end hvis man kun havde sat højde til 600px.*/
@@ -134,8 +141,35 @@ h1 {
     top: 25%;
     left: 13%;
 }
-.containerHeroImage{
-   /* height: 600px; */
+/*Tilbudssektion - Forsiden*/
+.tilbudSektionForsiden{
+    height: 400px;
+    max-height: 400px;
+    background-image: url(../images/Priser/egense_strand_camping_familie_tilbud.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.button{
+    background-color: var(--green);
+    color: white;
+}
+
+.tilbudSektionBillede{
+    /* width: 100%;
+    max-height: 60vh;
+    object-fit: cover;   
+    position: relative; */
+}
+
+.tilbudSektionForsiden{
+    margin-left: -15.625rem;
+    margin-right: -15.625rem;
+}
+.tilbudTekstForsiden{
+    color: black;
+    font-size: 2.5rem;
+
 }
 
 @media screen and (max-width: 1000px) {
