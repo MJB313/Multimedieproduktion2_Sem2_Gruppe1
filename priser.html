@@ -12,39 +12,74 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="icon" href="./assets/images/icon/caravan-solid.svg" />
+    <link rel="icon" href="./assets/images/caravan-solid.svg" />
     <script src="./assets/js/app.js" defer></script>
     <meta name="description" content="HUSK AT UDFYLD DETTE!" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html"></a></li>
-          <li>
-            <a href="#">Aktiviteter</a> <span>▼</span>
-            <ul class="dropdown">
-              <li><a href="pool.html">Pool</a></li>
-              <li><a href="legeplads.html">Legeplads / Mooncars</a></li>
-              <li><a href="minigolf.html">Minigolf</a></li>
-              <li><a href="pétanque.html">Pétanque</a></li>
-              <li><a href="muslinge_safari.html">Muslinge safari</a></li>
-            </ul>
-          </li>
-          <li><a href="overnatning.html">Overnatning</a></li>
-          <li>
-            <a href="#">Om campingpladsen</a> <span>▼</span>
-            <ul class="dropdown">
-              <li><a href="faciliteter.html">Faciliteter</a></li>
-              <li>
-                <a href="praktisk_information.html">Praktisk information</a>
-              </li>
-              <li><a href="om_os.html">Om os</a></li>
-            </ul>
-          </li>
-          <li><a href="omgivelser.html">Omgivelser</a></li>
-          <li><a href="Priser">Priser</a></li>
-        </ul>
+      <nav class="globalNavigation">
+        <a href="index.html">
+          <img
+            src="./assets/images/egense_strand_camping_logo.png"
+            alt="Egense strand campings logo"
+          />
+        </a>
+
+        <div class="nav_menu_mobile_wrapper">
+          <div class="nav_menu_mobile">
+            <a
+              href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1"
+              ><i class="fa-solid fa-calendar-days kalender"></i>
+              <p>Booking</p>
+            </a>
+          </div>
+
+          <div class="nav_menu_mobile">
+            <button class="burger">
+              <i class="fa-solid fa-bars"></i>
+              <p>menu</p>
+            </button>
+          </div>
+        </div>
+        <div class="navLinks">
+          <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li>
+              <a href="#" class="aktiviteter">Aktiviteter <span>▼</span></a>
+
+              <ul class="dropdown">
+                <li><a href="pool.html">Pool</a></li>
+                <li><a href="legeplads.html">Legeplads</a></li>
+                <li><a href="minigolf.html">Minigolf</a></li>
+                <li><a href="pétanque.html">Pétanque</a></li>
+                <li><a href="muslinge_safari.html">Muslinge safari</a></li>
+              </ul>
+            </li>
+            <li><a href="overnatning.html">Overnatning</a></li>
+            <li>
+              <a href="#" class="omCampingpladsen"
+                >Om campingpladsen <span>▼</span></a
+              >
+
+              <ul class="dropdown">
+                <li><a href="faciliteter.html">Faciliteter</a></li>
+                <li>
+                  <a href="praktisk_information.html">Praktisk information</a>
+                </li>
+                <li><a href="om_os.html">Om os</a></li>
+              </ul>
+            </li>
+            <li><a href="omgivelser.html">Omgivelser</a></li>
+            <li><a href="Priser">Priser</a></li>
+
+            <a
+              href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1"
+              id="bookGlobalNav"
+              >Book ophold</a
+            >
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
@@ -68,13 +103,13 @@
             </p>
           </div>
           <img
-            src="./assets/images/Priser/egense_strand_camping_solnedgang_over_Limfjorden.jpg"
+            src="./assets/images/egense_strand_camping_solnedgang_over_Limfjorden.jpg"
             alt="egense strand camping solnedgang over Limfjorden"
           />
         </section>
         <section class="z_layout">
           <img
-            src="./assets/images/Priser/egense_strand_camping_familie_tilbud.png"
+            src="./assets/images/egense_strand_camping_familie_tilbud.png"
             alt="egense strand camping solnedgang over Limfjorden"
           />
           <div class="text_section">
@@ -117,13 +152,13 @@
             </p>
           </div>
           <img
-            src="./assets/images/Priser/egense_strand_camping_solnedgang_over_Limfjorden.jpg"
+            src="./assets/images/egense_strand_camping_solnedgang_over_Limfjorden.jpg"
             alt="egense strand camping solnedgang over Limfjorden"
           />
         </section>
         <section class="z_layout">
           <img
-            src="./assets/images/Priser/egense_strand_camping_familie_tilbud.png"
+            src="./assets/images/egense_strand_camping_familie_tilbud.png"
             alt="egense strand camping solnedgang over Limfjorden"
           />
           <div class="text_section">
