@@ -104,7 +104,7 @@ h1 {
 
 
 /*Knapper*/
-#bookGlobalNav, .button-link {
+#bookGlobalNav, .button {
     text-decoration: none;
     color: white;
     padding: 1rem 2rem;
@@ -2000,8 +2000,14 @@ h1 {
 
 
 /* OMGIVELSER KODES HER */
-
-
+section{
+    padding-bottom: var(--sektion_spacer_mobile);
+}
+@media screen and (min-width: 1000px) {
+    section{
+        padding-bottom: var(--sektion_spacer_desktop);
+    }
+}
 
 
 
