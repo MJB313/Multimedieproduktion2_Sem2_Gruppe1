@@ -1382,9 +1382,12 @@ h1 {
 
 /* MUSLINGE SAFARI KODES HER */
 
-
-
-
+.opskrift li{
+    font-family: "quicksand", sans-serif; 
+    /*sætter punktopstillingen på linje med teksten*/
+   list-style-position: inside;
+    
+}
 
 
 
