@@ -88,7 +88,7 @@ h6 {
 }
 
 p,
-a {
+a, li {
     font-family: "quicksand", sans-serif;
     font-weight: var(--fs_medium);
     line-height: 150%;
@@ -2223,7 +2223,7 @@ main {
     color: white;
     border-radius: var(--border_radius_buttons);
     padding: 0.5rem 1rem;
-    max-width: 254px;
+    max-width: 100%;
     margin: 1rem 0 auto;
     font-size: var(--card_button_text_mobile);
 }
@@ -2249,12 +2249,16 @@ main {
     align-items: center;
 }
 
-
-
 .card p {
     font-size: var(--p_mobile);
     margin-bottom: 0.5rem;
     max-width: 100%;
+}
+
+.shortend {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -2263,28 +2267,55 @@ main {
     gap: var(--sektion_spacer_mobile);
 }
 
-.hytte_preview img {
-    width: 100%;
-    height: 330px;
+.card a {
+    max-width: 100%;
+    margin-bottom: 1rem;
 }
 
+
 .hytte_preview {
-    display: block; 
+    display: none; 
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    align-items: flex-start;
+    z-index: 2;
+    overflow-y: auto;
+    padding: 2rem 1rem;
 }
 
 .modal-box {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     max-width: 600px;
     width: 90%;
     border-radius: 8px;
     position: relative;
+    margin-bottom: var(--sektion_spacer_mobile);
+}
+
+.modal-box p, .text-content p, .modal-box li {
+    font-size: var(--p_mobile);
+}
+
+.modal-box h3,
+.modal-box p, .modal-box li {
+    margin-bottom: var(--text_spacer_mobile);
+   }
+
+.modal-box ul {
+    padding-left: 0;
+    padding-right: 0;
+    list-style-position: inside;
+}
+
+
+.hytte_preview img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .buttonClose {
@@ -2292,17 +2323,19 @@ main {
     top: 1rem;
     right: 1rem;
     cursor: pointer; }
-
-.hytte_preview img {
-    object-fit: cover;
-}
-
-.card a {
-    max-width: 100%;
+    
+.image-container i {
     margin-bottom: 1rem;
-    /* fjern dette efter modal er færdiglavet*/
 }
 
+.icon-text {
+    gap: 0.5rem;
+}
+
+.image-content, .text-content {
+    width: 100%;
+    order: unset;
+}
 
 @media screen and (min-width: 999px) {
     
@@ -2314,19 +2347,7 @@ main {
         width: 100%;
         height: 381px;
         object-fit: cover;
-    }
-    
-    .button-link {
-        background-color: var(--green);
-        text-decoration: none;
-        display: block;
-        text-align: center;
-        color: white;
-        border-radius: var(--border_radius_buttons);
-        padding: 0.5rem 1rem;
-        font-size: var(--card_button_text_desktop);
-        max-width: 100%;
-    }
+    }  
     
     .card {
         width: 347px;
@@ -2339,7 +2360,7 @@ main {
 
     .card i {
         font-size: 2rem;
-        width: 20px;
+        width: 40px;
     }
 
     .icon-text {
@@ -2354,16 +2375,47 @@ main {
         max-width: 100%;
     }
     
+    
     .card_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--sektion_spacer_desktop)
+        gap: var(--text_spacer_desktop)
     }
+
+    .button-link {
+        background-color: var(--green);
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        color: white;
+        border-radius: var(--border_radius_buttons);
+        padding: 0.5rem 1rem;
+        font-size: var(--card_button_text_desktop);
+        max-width: 50%;   
+    }
+
+        .intro-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
     
-    .card a {
-        margin-bottom: 1rem; /* fjern dette efter modal er færdiglavet*/
+        .image-content {
+            order: 2;
+        }
+    
+        .text-content {
+            order: 1;  
+        }
+    
+        .image-content,
+        .text-content {
+            width: 50%;           
+        }
     }
-}
+
+
+    
 
 
 
