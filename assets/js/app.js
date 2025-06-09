@@ -1,14 +1,21 @@
-const modal = document.querySelector('.hytte_preview');
-const openBtn = document.querySelector('.preview-active');
-const closeBtn = modal.querySelector('.buttonClose');
+document.addEventListener('DOMContentLoaded', () => {
+  const openButtons = document.querySelectorAll('.preview-active');
+  const closeButtons = document.querySelectorAll('.buttonClose');
 
-// Open modal
-openBtn.addEventListener('click', function (e) {
-  e.preventDefault();
-  modal.style.display = 'flex';
-});
+  // Open modal
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modalId = this.dataset.modal;
+      const modal = document.getElementById(modalId);
+      if (modal) modal.style.display = 'block';
+    });
+  });
 
-// Close modal
-closeBtn.addEventListener('click', function () {
-  modal.style.display = 'none';
+  // Close modal
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      this.closest('.hytte_preview').style.display = 'none';
+    });
+  });
 });

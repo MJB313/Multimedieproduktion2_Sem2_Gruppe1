@@ -92,7 +92,6 @@ a, li {
     font-family: "quicksand", sans-serif;
     font-weight: var(--fs_medium);
     line-height: 150%;
-    margin-bottom: var(--text_spacer_desktop);
 }
 
 h1 {
@@ -2209,6 +2208,35 @@ main {
     margin-inline: 30px;
 }
 
+.breadcrumb {
+    display: none;
+}
+
+.z_layout img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: var(--border_radius_buttons);
+}
+
+.z_layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.z_layout img {
+    order: -1;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: var(--border_radius_buttons);
+}
+
+.z_layout .text_section {
+    width: 100%; }
+
+
 .card img {
     width: 100%;
     height: 330px;
@@ -2275,7 +2303,7 @@ main {
 
 
 .hytte_preview {
-    display: none; 
+    display: none;
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
@@ -2286,11 +2314,16 @@ main {
     padding: 2rem 1rem;
 }
 
+.hytte_preview.active {
+    display: flex;
+}
+
 .modal-box {
     background: white;
     padding: 2.5rem;
     max-width: 600px;
     width: 90%;
+    margin: 0 auto var(--sektion_spacer_mobile) auto;
     border-radius: 8px;
     position: relative;
     margin-bottom: var(--sektion_spacer_mobile);
@@ -2344,6 +2377,41 @@ main {
     main {
         margin-inline: 150px;
     }
+
+    ul.breadcrumb {
+        padding: 1rem var(--generalSpacer);
+        list-style: none;
+        background-color: white;
+        background-color: var(--darkOrange);
+        justify-content: start;
+        width: 100%;
+    }
+
+    ul.breadcrumb li {
+        display: inline;
+        font-size: var(--fs-text);
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 1rem;
+        color: black;
+        content: ">\00a0";
+        font-weight: var(--fs_bold);
+    }
+
+    ul.breadcrumb li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .breadcrumb li:last-child a {
+        font-weight: var(--fs_bold);
+        text-decoration: underline;
+    }
+
+    .breadcrumb li:first-child a:hover {
+        color: black;
+        text-decoration: underline;   }
     
     .card img {
         width: 100%;
@@ -2425,6 +2493,7 @@ main {
         }
 
         .z_layout img {
+            order: 0;
             width: 100%;
             height: 420px;
             object-fit: cover;
