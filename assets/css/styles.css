@@ -2236,6 +2236,9 @@ main {
 .z_layout .text_section {
     width: 100%; }
 
+.overnatning_h2 {
+    margin-top: var(--text_spacer_mobile);
+}
 
 .card img {
     width: 100%;
@@ -2379,6 +2382,7 @@ main {
     }
 
     ul.breadcrumb {
+        display: block;
         padding: 1rem var(--generalSpacer);
         list-style: none;
         background-color: white;
