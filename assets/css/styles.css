@@ -103,6 +103,22 @@ h1 {
 
 
 
+/*Knapper*/
+#bookGlobalNav, .button-link {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    background-color: var(--green);
+    border-radius: var(--border_radius_buttons);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: "quicksand", sans-serif;
+    font-weight: var(--fs_bold);
+    transition: 0.3s ease-in-out;
+}
+
+#bookGlobalNav:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35); }
 /* FORSIDE KODES HER */
 /*NAV*/
 
