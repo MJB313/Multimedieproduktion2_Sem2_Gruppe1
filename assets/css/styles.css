@@ -2213,6 +2213,7 @@ main {
     width: 100%;
     height: 330px;
     object-fit: cover;
+    border-radius: var(--border_radius_buttons);
 }
 
 .button-link {
@@ -2337,20 +2338,22 @@ main {
     order: unset;
 }
 
+
 @media screen and (min-width: 999px) {
     
     main {
-        margin-inline: 250px;
+        margin-inline: 150px;
     }
     
     .card img {
         width: 100%;
         height: 381px;
         object-fit: cover;
+        border-radius: var(--border_radius_buttons);
     }  
     
     .card {
-        width: 347px;
+        width: 324px;
     }
     
     .card_title {
@@ -2376,10 +2379,11 @@ main {
     }
     
     
-    .card_wrapper {
+        .card_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--text_spacer_desktop)
+        gap: var(--text_spacer_desktop);
+        justify-content: center;
     }
 
     .button-link {
@@ -2412,9 +2416,55 @@ main {
         .text-content {
             width: 50%;           
         }
+
+        .z_layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--gap);
+            margin-bottom: var(--sektion_spacer_desktop);
+        }
+
+        .z_layout img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: var(--border_radius_buttons);
+        }
+
+        .z_layout a {
+            text-decoration: none;
+            color: white;
+            padding: 1rem 2rem;
+            background-color: var(--green);
+            border-radius: var(--border_radius_buttons);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            font-family: "quicksand", sans-serif;
+            font-weight: var(--fs_bold);
+            display: inline-block;
+            transition: 0.3s ease-in-out;
+        }
+
+        .z_layout a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+        }
+
+        @media screen and (max-width: 1270px) {
+            .z_layout {
+                grid-template-columns: 1fr;
+            }
+
+            .z_layout img:nth-child(even) {
+                grid-row: 1;
+            }
+
+            .z_layout a {
+                display: block;
+                text-align: center;
+            }         }
+
     }
-
-
     
 
 
