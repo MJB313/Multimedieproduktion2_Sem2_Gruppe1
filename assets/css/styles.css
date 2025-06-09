@@ -103,6 +103,22 @@ h1 {
 
 
 
+/*Knapper*/
+#bookGlobalNav, .button-link {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    background-color: var(--green);
+    border-radius: var(--border_radius_buttons);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: "quicksand", sans-serif;
+    font-weight: var(--fs_bold);
+    transition: 0.3s ease-in-out;
+}
+
+#bookGlobalNav:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35); }
 /* FORSIDE KODES HER */
 /*NAV*/
 
@@ -145,7 +161,7 @@ h1 {
 .tilbudSektionForsiden{
     height: 400px;
     max-height: 400px;
-    background-image: url(../images/Priser/egense_strand_camping_familie_tilbud.png);
+    background-image: url(../images/egense_strand_camping_familie_tilbud.png);
     background-position: center;
     background-size: cover;
 }
@@ -1382,9 +1398,12 @@ h1 {
 
 /* MUSLINGE SAFARI KODES HER */
 
-
-
-
+.opskrift li{
+    font-family: "quicksand", sans-serif; 
+    /*sætter punktopstillingen på linje med teksten*/
+   list-style-position: inside;
+    
+}
 
 
 
@@ -2881,8 +2900,41 @@ h1 {
 
 
 /* POOL STYLES HER */
+/*Styling af billede Galleri*/
+@media screen and (min-width: 1000px){
+    .billedeGalleri{
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        gap:1.875rem;
+        padding-bottom: var(--sektion_spacer_desktop);
+    }
 
-
+    .image1Galleri {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    .image2Galleri{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+    .image4Galleri{
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .image3Galleri{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
 
 
 
