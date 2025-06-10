@@ -559,7 +559,39 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
   }
-}
+
+  .billedeGalleri {
+    gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+          "img1 img2"
+          "img3 img3"
+          "img4 img4";
+  }
+
+  .image1Galleri {
+      grid-area: img1;
+  }
+
+  .image2Galleri {
+      grid-area: img2;
+  }
+
+  .image3Galleri {
+      grid-area: img3;
+  }
+
+  .image4Galleri {
+      grid-area: img4;
+  }
+
+  .billedeGalleri img{
+    width: 100%;
+        height: 300px;
+        object-fit: cover;
+  }
+  }
+
 
 @media screen and (max-width: 700px) {
   main {
@@ -613,6 +645,12 @@ footer a:hover {
     font-size: var(--p_mobile);
   }
 
+.z_layout a:hover{
+    display: none;
+}
+
+
+
   h1 {
     font-size: var(--fs_h1_mobile);
     margin-block: var(--sektion_spacer_mobile);
@@ -647,6 +685,14 @@ footer a:hover {
   .globalNavigation img {
     height: 25px;
   }
+
+  .billedeGalleri img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+  }
+
+
 }
 
 /* FACILITETER KODER HER */
@@ -776,9 +822,22 @@ ul.breadcrumb li a {
     grid-template-columns: 1fr;
     gap: var(--sektion_spacer_mobile);
   }
+
+
+
+
 }
 
 /* LEGEPLADS KODES HER */
+
+.billedeGalleri {
+    display: grid;
+}
+
+.greytext {
+    color: #808080;
+    font-family: "georgiapro", sans-serif;
+}
 
 /* MINIGOLF KODES HER */
 
