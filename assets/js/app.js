@@ -189,7 +189,7 @@ if (aktiviteter) {
 
 // Vi gør det samme hernede, som med den overstående. 
 const omCampingpladsen = document.querySelector(".omCampingpladsen");
-const omCampingDropdown = omCampingpladsen.parentElement.querySelector(".dropdown");
+const omCampingDropdown = omCampingpladsen.querySelector(".dropdown");
 
 if (omCampingpladsen) {
   omCampingpladsen.addEventListener("click", (e) => {
