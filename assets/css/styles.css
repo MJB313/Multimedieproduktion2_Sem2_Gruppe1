@@ -423,20 +423,15 @@ footer p {
   width: 3rem;
 }
 
-.fa-facebook-f {
+.fa-square-facebook {
   color: white;
   font-size: 3rem;
-  padding-left: 1rem;
   padding-top: 0;
 }
 
 .weather {
   display: flex;
-  gap: 1rem;
-}
-
-.linkfooter {
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .bold {
@@ -463,6 +458,11 @@ footer a:hover {
 .linkfooter {
   display: flex;
   align-items: stretch;
+  gap: 1.5rem;
+}
+
+.smiley_rapport img{
+width: 45px;
 }
 
 /* FORSIDE KODES HER */
@@ -503,6 +503,7 @@ footer a:hover {
   grid-row: 1;
   padding: 12rem 0 0 var(--margin_desktop);
 }
+
 
 /*Tilbudssektion - Forsiden*/
 .tilbudSektionForsiden {
