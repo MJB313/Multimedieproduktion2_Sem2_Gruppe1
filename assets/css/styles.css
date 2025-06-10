@@ -407,8 +407,7 @@ h1 {
 
 
 main {
-    margin-top: 100px;
-    margin-inline: 100px;
+    margin-inline: 150px;
 }
 
 ul.breadcrumb {
@@ -454,14 +453,23 @@ ul.breadcrumb li a {
 }
 
 .button-link {
-    background-color: var(--green);
     text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    background-color: var(--green);
+    border-radius: var(--border_radius_buttons);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: "quicksand", sans-serif;
+    font-weight: var(--fs_bold);
     display: block;
     text-align: center;
-    color: white;
-    border-radius: var(--border_radius_buttons);
-    padding: 0.5rem 1rem;
-    font-size: var(--card_button_text_desktop);
+    transition: 0.3s ease-in-out;
+    font-size: var(--p_desktop);
+}
+
+.button-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
 .card {
@@ -483,7 +491,8 @@ ul.breadcrumb li a {
 .card_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--sektion_spacer_desktop)
+    gap: var(--sektion_spacer_desktop);
+    justify-content: center;
 }
 
 
@@ -526,8 +535,10 @@ ul.breadcrumb li a {
 
     
     .card_wrapper {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: var(--sektion_spacer_mobile);
+        justify-content: center;
     }
 
 }
