@@ -13,38 +13,6 @@ async function getData(){
 getData();
 
 
-// //Sætte hentet data ind i DOM på MINIGOLF siden
-// const AktivitetIndhold = document.querySelector(".Aktivitet-indhold")
-// function renderActivities (dataWordpress){
-//     if(Array.isArray(dataWordpress)){
-//         dataWordpress.forEach(post => {
-//             AktivitetIndhold.innerHTML += `
-//           <h1 class="overskrift">${post.acf.titel}</h1>
-//           <img src="${post.acf.sektion_1.billede_desktop.url}" alt="">
-//           <p class="beskrivelse">${post.acf.sektion_1.beskrivelse}</p>
-//         `
-//         })
-//     }
-// }
-// async function init() {
-
-//     const data = await getData()
-//     renderActivities(data);
-
-// }
-// init()
-
-
-//Sætte hentet data ind i DOM på MINIGOLF siden
-// const AktivitetIndhold = document.querySelector(".Aktivitet-indhold")
-// function renderActivities(data) {
-//     const activite =data[6];
-//         AktivitetIndhold.innerHTML += `
-//           <h1 class="overskrift">${activite.acf.titel}</h1>
-//           <img src="${activite.acf.sektion_1.billede_desktop.url}" alt="">
-//           <p class="beskrivelse">${activite.acf.sektion_1.beskrivelse}</p>
-//         `
-// }
 async function init() {
 
     const data = await getData()
@@ -53,11 +21,8 @@ async function init() {
 
 
 }
+
 init()
-
-//kan vi indsætte alt data evt med en for loop if key = sektion. 
-
-
 
 
 /*Indsætter indhold på priser siden */
@@ -196,34 +161,310 @@ function renderPriser(data) {
   </table>
   </div>
   
-  <button class="accordion">Overskrift?
+  <button class="accordion">${prisData.acf.Accordion_2.Kolonne_1.overskrift}
   <i class="fa-solid fa-caret-down"></i>
   </button>
   <div class="accordion-content">
-  <p>Indhold</p>
+   <table>
+  <tr>
+  <th>${prisData.acf.Accordion_2.Kolonne_1.overskrift}</th>
+  <th>${prisData.acf.Accordion_2.Kolonne_2.overskrift}</th>
+  <th>${prisData.acf.Accordion_2.Kolonne_3.overskrift}</th>
+
+  </tr>
+
+   <tr>
+
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_1}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_1}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_1}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_2}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_2}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_2}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_3}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_3}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_3}</td>
+   </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_4}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_4}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_4}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_5}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_5}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_5}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_6}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_6}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_6}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_7}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_7}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_7}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_8}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_8}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_8}</td>
+  </tr>
+  <tr>
+   <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_9}</td>
+   <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_9}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_9}</td>
+   </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_10}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_10}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_10}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_11}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_11}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_11}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_12}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_12}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_12}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_13}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_13}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_13}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_14}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_14}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_14}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_15}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_15}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_15}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_16}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_16}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_16}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_2.Kolonne_1.tekst_17}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_2.tekst_17}</td>
+  <td>${prisData.acf.Accordion_2.Kolonne_3.tekst_17}</td>
+  </tr>
+
+  </table>
   </div>
   
-  <button class="accordion">Overskrift?
+<button class="accordion">${prisData.acf.Accordion_3.Kolonne_1.overskrift}
   <i class="fa-solid fa-caret-down"></i>
   </button>
   <div class="accordion-content">
-  <p>Indhold</p>
+   <table>
+  <tr>
+  <th>${prisData.acf.Accordion_3.Kolonne_1.overskrift}</th>
+  <th>${prisData.acf.Accordion_3.Kolonne_2.overskrift}</th>
+  <th>${prisData.acf.Accordion_3.Kolonne_3.overskrift}</th>
+
+  </tr>
+
+   <tr>
+
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_1}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_1}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_1}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_2}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_2}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_2}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_3}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_3}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_3}</td>
+   </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_4}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_4}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_4}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_5}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_5}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_5}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_6}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_6}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_6}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_7}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_7}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_7}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_8}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_8}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_8}</td>
+  </tr>
+  <tr>
+   <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_9}</td>
+   <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_9}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_9}</td>
+   </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_10}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_10}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_10}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_11}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_11}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_11}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_12}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_12}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_12}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_13}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_13}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_13}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_14}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_14}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_14}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_15}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_15}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_15}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_16}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_16}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_16}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_17}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_17}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_17}</td>
+  </tr>
+    <tr>
+   <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_18}</td>
+   <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_18}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_18}</td>
+   </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_18}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_18}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_18}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_18}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_18}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_18}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_19}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_19}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_19}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_20}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_20}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_20}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_21}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_21}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_21}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_22}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_22}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_22}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_23}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_23}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_23}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_24}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_24}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_24}</td>
+  </tr>
+    <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_25}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_25}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_25}</td>
+  </tr>
+   <tr>
+  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_26}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_26}</td>
+  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_26}</td>
+  </tr>
+
+  </table>
   </div>
   
-  <button class="accordion">Overskrift?
+<button class="accordion">${prisData.acf.Accordion_4.Kolonne_1.overskrift}
   <i class="fa-solid fa-caret-down"></i>
   </button>
   <div class="accordion-content">
-  <p>Indhold</p>
+   <table>
+  <tr>
+  <th>${prisData.acf.Accordion_3.Kolonne_1.overskrift}</th>
+  <th>${prisData.acf.Accordion_3.Kolonne_2.overskrift}</th>
+  <th>${prisData.acf.Accordion_3.Kolonne_3.overskrift}</th>
+
+  </tr>
+
+   <tr>
+
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_4.Kolonne_1.tekst_1}</td>
+  <td>${prisData.acf.Accordion_4.Kolonne_2.tekst_1}</td>
+  <td>${prisData.acf.Accordion_4.Kolonne_3.tekst_1}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_4.Kolonne_1.tekst_2}</td>
+  <td>${prisData.acf.Accordion_4.Kolonne_2.tekst_2}</td>
+  <td>${prisData.acf.Accordion_4.Kolonne_3.tekst_2}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_4.Kolonne_1.tekst_3}</td>
+  <td>${prisData.acf.Accordion_4.Kolonne_2.tekst_3}</td>
+  <td>${prisData.acf.Accordion_4.Kolonne_3.tekst_3}</td>
+   </tr>
+
+
+  </table>
   </div>
+ 
   
   </section>
   `
   /*kalder accordion funktionen her får at få dem til at virke. da koden ellers kører før data er hentet ned */
   startAccodion();
 }
-
-
 
 
 
