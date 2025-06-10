@@ -407,48 +407,104 @@ h1 {
 
 
 main {
-    margin-inline: 150px;
+    margin-inline: var(--margin_desktop);
 }
 
-ul.breadcrumb {
-    padding: 1rem var(--generalSpacer);
-    list-style: none;
-    background-color: white;
-    background-color: var(--darkOrange);
-    justify-content: start;
+.breadcrumb {
+    display: none;
+}
+
+/* Z-layout styling - START */
+
+.z_layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.z_layout img {
+    order: -1;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: var(--border_radius_buttons);
+}
+
+.z_layout .text_section {
     width: 100%;
 }
 
-ul.breadcrumb li {
-    display: inline;
-    font-size: var(--fs-text);
+/* Z-layout styling - SLUT */
+
+.overnatning_h2 {
+    margin-top: var(--text_spacer_mobile);
 }
 
-ul.breadcrumb li+li:before {
-    padding: 1rem;
-    color: black;
-    content: ">\00a0";
-    font-weight: var(--fs_bold);
-}
+/* Card styling - START */
 
-ul.breadcrumb li a {
-    color: black;
-    text-decoration: none;
-}
-
-.breadcrumb li:last-child a {
-    font-weight: var(--fs_bold);
-    text-decoration: underline;
-}
-
-.breadcrumb li:first-child a:hover {
-    color: black;
-    text-decoration: underline;
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    background: white;
+    border-radius: var(--border_radius_buttons);
+    width: 100%;
 }
 
 .card img {
-    height: 381px;
     width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: var(--border_radius_buttons);
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.card_title {
+    font-size: var(--fs_h3_mobile);
+    font-weight: var(--fs_bold);
+    text-align: left;
+    margin: 0 0 0.5rem 0;
+}
+
+
+.card p {
+    font-size: var(--p_mobile);
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+}
+
+
+.card_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(324px, 1fr));
+    gap: var(--sektion_spacer_mobile);
+    justify-content: center;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.card a {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Card styling - SLUT */
+
+
+.buttonClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
 }
 
 .button-link {
@@ -463,81 +519,145 @@ ul.breadcrumb li a {
     display: block;
     text-align: center;
     transition: 0.3s ease-in-out;
-    font-size: var(--p_desktop);
+    font-size: var(--card_button_text_mobile);
 }
 
-.button-link:hover {
-    transform: scale(1.1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-}
+/* Modal styling - SLUT */
 
-.card {
-    width: 100%;
-}
+@media screen and (max-width: 750px) {
+    .card_wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+ }
 
-.card_title {
-    font-size: var(--fs_h3_desktop);
 }
 
 
-.card p {
-    font-size: var(--p_desktop);
-    margin-bottom: 1rem;
-}
-
-.card_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--sektion_spacer_desktop);
-    justify-content: center;
-    justify-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-
-@media screen and (max-width: 999px) {
-    
-    .card img {
-        width: 254px;
-        height: 330px;
-        object-fit: cover;
+@media screen and (min-width: 999px) {
+    main {
+        margin-inline: 150px;
     }
 
-    .button-link {
-        background-color: var(--green);
-        text-decoration: none;
+    /* Breadcrumb styling - START */
+
+    ul.breadcrumb {
         display: block;
-        text-align: center;
-        color: white;
-        border-radius: var(--border_radius_buttons);
-        padding: 0.5rem 1rem;
-        max-width: 254px;
-        margin: 1rem 0 auto;
-        font-size: var(--card_button_text_mobile);
+        padding: 1rem var(--generalSpacer);
+        list-style: none;
+        background-color: var(--darkOrange);
+        justify-content: start;
+        width: 100%;
+    }
+
+    ul.breadcrumb li {
+        display: inline;
+        font-size: var(--fs-text);
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 1rem;
+        color: black;
+        content: ">\00a0";
+        font-weight: var(--fs_bold);
+    }
+
+    ul.breadcrumb li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .breadcrumb li:last-child a {
+        font-weight: var(--fs_bold);
+        text-decoration: underline;
+    }
+
+    .breadcrumb li:first-child a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    /* Breadcrumb styling - SLUT */
+
+    /* Card Styling Desktop - START */
+
+
+    .card img {
+        height: 381px;
     }
 
     .card {
         width: 324px;
+        height: 650px;
     }
 
     .card_title {
-        font-size: var(--fs_h3_mobile);
+        font-size: var(--fs_h3_desktop);
     }
 
 
     .card p {
-        font-size: var(--p_mobile);
-        margin-bottom: 1rem;   
-        max-width: 254px;
+        font-size: var(--p_desktop);
+        margin-bottom: 1rem;
     }
 
-    
     .card_wrapper {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--text_spacer_desktop);
+        justify-content: center;
     }
 
-}
+    .button-link {
+        font-size: var(--card_button_text_desktop);
+        max-width: 50%;
+    }
+
+    .button-link:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Card Styling Desktop - SLUT */
+    }
+
+    /* Første tekst sektion inde på modalet - SLUT */
+
+
+
+    /* Z-layout styling - START */
+
+    .z_layout {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(324px, 1fr));
+        gap: var(--gap);
+        margin-bottom: var(--sektion_spacer_desktop);
+    }
+
+    .z_layout img {
+        order: 0;
+        height: 420px;
+        object-position: center;
+    }
+
+    .z_layout a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: var(--green);
+        border-radius: var(--border_radius_buttons);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "quicksand", sans-serif;
+        font-weight: var(--fs_bold);
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+    }
+
+    .z_layout a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    }
+
+
+/* Z-layout - SLUT */
 
 
 
