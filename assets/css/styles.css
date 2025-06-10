@@ -221,8 +221,8 @@ ul li ul.dropdown {
   background-color: #255885;
   display: block;
   padding: 1rem;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  text-align: left;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
   font-size: 18px;
 }
 
@@ -340,7 +340,7 @@ ul li ul.dropdown.showDropdown {
 
   .globalNavigation li {
     padding-block: 2rem;
-    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2) inset;
   }
 
   .dropdown li a {
@@ -356,6 +356,35 @@ ul li ul.dropdown.showDropdown {
   .containerHeroImage .pHeroForside {
     padding-left: 5rem;
   }
+
+  .containerHeroImage .weatherForside {
+      gap: 1.5rem;
+      padding-right: 5rem;
+  }
+
+  .weatherForside div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .containerHeroImage .weatherForside div i {
+      font-size: 2.5rem;
+  }
+
+  .containerHeroImage .weatherForside p {
+      color: white;
+      margin: 0;
+      font-size: 1.5rem;
+  }
+
+  .containerHeroImage .h1HeroForside{
+    font-size: 3rem;
+  }
+  .containerHeroImage .pHeroForside{
+    font-size: 2rem;
+    padding-top: 10rem;
+  }
 }
 
 /*Knapper*/
@@ -366,7 +395,7 @@ ul li ul.dropdown.showDropdown {
   padding: 1rem 2rem;
   background-color: var(--green);
   border-radius: var(--border_radius_buttons);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2) inset;
   font-family: "quicksand", sans-serif;
   font-weight: var(--fs_bold);
   transition: 0.3s ease-in-out;
@@ -374,8 +403,7 @@ ul li ul.dropdown.showDropdown {
 
 #bookGlobalNav:hover {
   transform: scale(1.1);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-}
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2) inset;}
 
 /* Footer */
 footer {
@@ -539,16 +567,43 @@ footer a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
-@media screen and (max-width: 1000px) {
-  .h1HeroForside {
-    color: white;
+.weatherForside{
+    grid-column: 1;
+    grid-row: 1;
+    color:white;
+    justify-content: start;
+    align-items: end;
+    padding: 100px 10rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.weatherForside div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weatherForside div i {
+    font-size: 3rem;
+}
+
+.weatherForside p{
+    color:white;
+    margin: 0;
     font-size: 2rem;
-    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .containerHeroImage .h1HeroForside {
+    color: white;
+    font-size: 2.5rem;
   }
 
-  .pHeroForside {
+  .containerHeroImage .pHeroForside {
     font-size: 1.5rem;
-    padding: 6rem 0 0 var(--margin_desktop);
+    padding-top: 8.5rem;
   }
 
   footer p {
@@ -590,10 +645,34 @@ footer a:hover {
         height: 300px;
         object-fit: cover;
   }
+
+  .containerHeroImage .weatherForside {
+      gap: 1.5rem;
+      padding-right: 5rem;
+  }
+
+  .weatherForside div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .containerHeroImage .weatherForside div i {
+      font-size: 2rem;
+  }
+
+  .containerHeroImage .weatherForside p {
+      color: white;
+      margin: 0;
+      font-size: 1rem;
   }
 
 
-@media screen and (max-width: 700px) {
+
+  }
+
+
+@media screen and (max-width: 750px) {
   main {
     margin-inline: 1rem;
   }
@@ -670,6 +749,29 @@ footer a:hover {
     display: none;
   }
 
+
+  .containerHeroImage .weatherForside {
+      gap: 1.5rem;
+      padding-right: 1rem;
+      padding-top: 3rem;
+  }
+
+  .weatherForside div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .containerHeroImage .weatherForside div i {
+      font-size: 1.5rem;
+  }
+
+  .containerHeroImage .weatherForside p {
+      color: white;
+      margin: 0;
+      font-size: 0.75rem;
+  }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -695,6 +797,27 @@ footer a:hover {
       object-fit: cover;
   }
 
+  .containerHeroImage .weatherForside {
+      gap: 1.5rem;
+      padding-right: 1rem;
+      padding-top: 1.5rem;
+  }
+
+  .weatherForside div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .containerHeroImage .weatherForside div i {
+      font-size: 1rem;
+  }
+
+  .containerHeroImage .weatherForside p {
+      color: white;
+      margin: 0;
+      font-size: 0.5rem;
+  }
 
 }
 
