@@ -84,10 +84,10 @@
     </header>
     <main>
       <ul class="breadcrumb">
-        <li><a href=".//index.html">Forside</a></li>
-        <li><a href=".//faciliteter.html">faciliteter</a></li>
+        <li><a href="./index.html">Forside</a></li>
+        <li><a href="./om_os.html">Om os</a></li>
       </ul>
-      <section class="wrapper">
+      
         <h1>Om os</h1>
         <section class="z_layout">
           <div class="text_section">
@@ -166,7 +166,7 @@
         </section>
         <section class="z_layout">
           <img
-            src="./assets/images/Priser/egense_strand_camping_familie_tilbud.png"
+            src="./assets/images/egense_strand_camping_familie_tilbud.png"
             alt="egense strand camping solnedgang over Limfjorden"
           />
           <div class="text_section">
@@ -185,22 +185,54 @@
         </section>
         <section class="z_layout">
           <div class="text_section">
-            <h2>Kontaktoplysninger</h2>
-            <p>
-              +45 40 81 59 78 egenseinfo@gmail.com Kystvej 6, 9280 Storvorde
-              CVR-nr: 10546397
-            </p>
+           <div>
+           <p>
+          <h2>Kontakt</h2>
+          <br />
+          <a
+            href="https://www.google.com/maps/place/Kystvej+6,+9280+Storvorde/@56.9805637,10.3004453,17z/data=!3m1!4b1!4m6!3m5!1s0x464ec44e48a1835d:0xc1d886c2f1d3594a!8m2!3d56.9805637!4d10.3004453!16s%2Fg%2F11c21mt4w4?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D"
+            ><i class="fa-solid fa-location-dot"></i> Kystvej 6, 9280
+            Storvorde</a
+          >
+          <br />
+          <a href="tel:+4540815978"
+            ><i class="fa-solid fa-phone"></i> +45 40 81 59 78</a
+          >
+          <br />
+          <a href="mailto:egenseinfo@gmail.com"
+            ><i class="fa-solid fa-envelope"></i> egenseinfo@gmail.com</a
+          >
+          <br />
+          <a href="">
+            <i class="fa-solid fa-building"></i> CVR-nr: 10546397
+          </a>
+        </p>
+      </div>
             <form>
-              <label for="name">Dit navn:</label>
+              <div>
+              <label for="name">Navn:</label>
               <input type="text" id="name" placeholder="Dit navn" />
+              </div>
+
+              <div>
               <label for="mail">E-mail:</label>
               <input type="mail" name="mail" id="mail" placeholder="E-mail:" />
-              <label for="textinput">Besked</label>
+              </div>
+
+              <div id="textinput">
+              <label for="textinput">Besked:</label>
               <input
                 type="text"
                 id="textinput"
                 placeholder="Skriv din besked her"
               />
+              </div>
+
+              <div>
+                <input type="submit" value="Send e-mail" class="submit">
+              </div>
+
+
             </form>
           </div>
           <img
@@ -251,7 +283,6 @@
             alt="egense strand camping 2 børn på stranden"
           />
         </section>
-      </section>
     </main>
     <footer>
       <div class="Kontakt">
@@ -264,16 +295,18 @@
             Storvorde</a
           >
           <br />
-          <a href="tel: +45 40 81 59 78"
+          <a href="tel:+4540815978"
             ><i class="fa-solid fa-phone"></i>+45 40 81 59 78</a
           >
           <br />
-          <a href="mailto: egenseinfo@gmail.com"
+          <a href="mailto:egenseinfo@gmail.com"
             ><i class="fa-solid fa-envelope"></i>egenseinfo@gmail.com</a
           >
           <br />
-          <i class="fa-solid fa-building"></i>
-          CVR-nr: 10546397
+          <a href="">
+            <i class="fa-solid fa-building"></i>
+            CVR-nr: 10546397
+          </a>
         </p>
       </div>
       <div>
@@ -306,11 +339,11 @@
         <div class="weather">
           <div>
             <i class="fa-solid fa-cloud-sun"></i>
-            <p class="apiDMI">20 grader</p>
+            <p class="apiDMI">20°C</p>
           </div>
           <div>
-            <i class="fa-solid fa-cloud-sun"></i>
-            <p class="apiDMI">15 grader</p>
+            <i class="fa-solid fa-water"></i>
+            <p class="apiDMI">15°C</p>
           </div>
         </div>
         <div class="linkfooter">
@@ -376,8 +409,16 @@
             </svg>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61553829880147">
-            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-square-facebook"></i>
           </a>
+          <a
+            href="https://www.findsmiley.dk/Sider/Search.aspx?k=egense%20strand%20camping"
+            target="_blank"
+            class="smiley_rapport"
+            ><img
+              src="./assets/images/smiley_rapport.jpg"
+              alt="Logo af smiley rapport"
+          /></a>
         </div>
       </div>
     </footer>
