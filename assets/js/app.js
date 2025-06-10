@@ -7,7 +7,7 @@ const getRealImageUrls = "&acf_format=standard";
 async function getData(){
     const res =await fetch(domain +postsEndpoint);
     const dataWordpress = await res.json();
-    // console.log('dataWordpress:', dataWordpress)
+    console.log('dataWordpress:', dataWordpress)
     return dataWordpress;
 }
 getData();
@@ -80,7 +80,16 @@ document.querySelectorAll(".accordion").forEach(button => {
 
 
 
-
+/*Indsætter indhold på priser siden */
+const prisData = document.querySelector(".priserData")
+function renderActivities(data) {
+    const prisData =data[0]
+        AktivitetIndhold.innerHTML += `
+          <h1 class="overskrift">${activite.acf.titel}</h1>
+          <img src="${activite.acf.sektion_1.billede_desktop.url}" alt="">
+          <p class="beskrivelse">${activite.acf.sektion_1.beskrivelse}</p>
+        `
+}
 
 
 
