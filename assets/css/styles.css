@@ -7561,3 +7561,14 @@ ul li ul.dropdown.showDropdown {
 
 }
 
+/*styling af tabel*/
+table, th, td{
+    border: 1px solid black;
+}
+table{
+    width: 100%;
+    padding: 1rem;
+}
+th{
+    text-align: start;
+}

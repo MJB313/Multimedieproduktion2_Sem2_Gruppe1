@@ -36,29 +36,202 @@ getData();
 
 
 //Sætte hentet data ind i DOM på MINIGOLF siden
-const AktivitetIndhold = document.querySelector(".Aktivitet-indhold")
-function renderActivities(data) {
-    const activite =data[6];
-        AktivitetIndhold.innerHTML += `
-          <h1 class="overskrift">${activite.acf.titel}</h1>
-          <img src="${activite.acf.sektion_1.billede_desktop.url}" alt="">
-          <p class="beskrivelse">${activite.acf.sektion_1.beskrivelse}</p>
-        `
-}
+// const AktivitetIndhold = document.querySelector(".Aktivitet-indhold")
+// function renderActivities(data) {
+//     const activite =data[6];
+//         AktivitetIndhold.innerHTML += `
+//           <h1 class="overskrift">${activite.acf.titel}</h1>
+//           <img src="${activite.acf.sektion_1.billede_desktop.url}" alt="">
+//           <p class="beskrivelse">${activite.acf.sektion_1.beskrivelse}</p>
+//         `
+// }
 async function init() {
 
     const data = await getData()
-    renderActivities(data);
+    // renderActivities(data);
+    renderPriser(data);
+
 
 }
 init()
 
 //kan vi indsætte alt data evt med en for loop if key = sektion. 
 
+
+
+
+/*Indsætter indhold på priser siden */
+const sektionPriser = document.querySelector(".priserData")
+// if(prisData)
+function renderPriser(data) {
+  console.log('data:', data)
+  const prisData =data[0];
+  sektionPriser.innerHTML += `
+  <h1>${prisData.acf.titel}</h1>
+  <section class="z_layout">
+  <div class="text_section">
+  <p>
+  ${prisData.acf.sektion_1.beskrivelse}
+  <br><br>
+  <span class="bold">
+  ${prisData.acf.sektion_1.underoverskrift}</span>
+  <br>
+  ${prisData.acf.sektion_1.beskrivelse_Kopier}
+  </p>
+  </div>
+  <img
+  src="${prisData.acf.sektion_1.billede_desktop.url}"
+  alt="${prisData.acf.sektion_1.billede_desktop.alt}"
+  />
+  </section>
+  <section class="z_layout">
+  <img
+  src="${prisData.acf.sektion_2.billede_desktop.url}"
+  alt="${prisData.acf.sektion_2.billede_desktop.alt}"
+  />
+  
+  <div class="text_section">
+  <h2>${prisData.acf.sektion_2.overskrift}</h2>
+  <p>
+  <span class="bold">${prisData.acf.sektion_2.underoverskrift}</span>
+  ${prisData.acf.sektion_2.beskrivelse}
+  <span class="bold">Inkluderet:</span>
+  ${prisData.acf.sektion_2.Inkluderet_indhold}
+  <br>
+  <span class="bold">Priser:</span>
+  ${prisData.acf.sektion_2.beskrivelse_Kopier}
+  <br>
+  <span class="bold">Bemærk:</span>
+  ${prisData.acf.sektion_2.beskrivelse_Kopier2}
+  </p>
+  <a
+  href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1"
+  >${prisData.acf.sektion_2.knap}</a
+  >
+  </div>
+  </section>
+  <section class="z_layout">
+  <div class="text_section">
+  <h2>${prisData.acf.sektion_3.overskrift}</h2>
+  <p>
+  <span class="bold">Indhold:</span>
+  ${prisData.acf.sektion_3.beskrivelse}
+  <br>
+  <span class="bold">Pris:</span>
+  ${prisData.acf.sektion_3.beskrivelse_Kopier}
+  <br>
+  <span class="bold">Inkluderet:</span>
+  ${prisData.acf.sektion_3.Inkluderet_indhold}
+  <br>
+  <span class="bold">Bemærk:</span>
+  ${prisData.acf.sektion_3.beskrivelse_Kopier2}
+  </p>
+  </div>
+  <img
+  src="${prisData.acf.sektion_3.billede_desktop.url}"
+  alt="egense strand camping solnedgang over Limfjorden"
+  />
+  </section>
+  <section class="z_layout">
+  <img
+  src="${prisData.acf.sektion_4.billede_desktop.url}"
+  alt="egense strand camping solnedgang over Limfjorden"
+  />
+  <div class="text_section">
+  <h2>${prisData.acf.sektion_4.overskrift}</h2>
+  <p>
+  <span class="bold">Indhold:</span>
+  ${prisData.acf.sektion_4.beskrivelse}
+  <br>
+  <span class="bold">Pris:</span>
+  ${prisData.acf.sektion_4.beskrivelse_Kopier}
+  <br>
+  <span class="bold">Special pris:</span>
+  ${prisData.acf.sektion_4.specialpris}
+  <span class="bold">Inkluderet:</span>
+  ${prisData.acf.sektion_4.beskrivelse_Kopier2}
+  <br>
+  <span class="bold">Bemærk:</span>
+  ${prisData.acf.sektion_4.beskrivelse_Kopier2}
+  </p>
+  <a
+  href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1"
+  >Book ophold</a>
+  </div>
+  </section>
+  
+  <section class="z_layout">
+  <div class="text_section">
+  <h2>${prisData.acf.sektion_5.overskrift}</h2>
+  <p>
+  ${prisData.acf.sektion_5.beskrivelse}
+  </p>
+  </div>
+  <img src="${prisData.acf.sektion_5.billede_desktop.url}"
+  alt="${prisData.acf.sektion_5.billede_desktop.alt}" />
+  <a href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1">${prisData.acf.sektion_5.knap}</a>
+  </section>
+  <section>
+  
+  <button class="accordion">${prisData.acf.Accordion_1.Kolonne_1.overskrift}
+  <i class="fa-solid fa-caret-down"></i>
+  </button>
+  <div class="accordion-content">
+  <table>
+  <tr>
+  <th>${prisData.acf.Accordion_1.Kolonne_1.overskrift}</th>
+  <th>${prisData.acf.Accordion_1.Kolonne_1.tekst_1}</th>
+  <th>${prisData.acf.Accordion_1.Kolonne_1.tekst_2}</th>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_1.Kolonne_2.overskrift}</td>
+  <td>${prisData.acf.Accordion_1.Kolonne_2.tekst_1}</td>
+  <td>${prisData.acf.Accordion_1.Kolonne_2.tekst_2}</td>
+  </tr>
+  <tr>
+  <td>${prisData.acf.Accordion_1.Kolonne_3.overskrift}</td>
+  <td>${prisData.acf.Accordion_1.Kolonne_3.tekst_1}</td>
+  <td>${prisData.acf.Accordion_1.Kolonne_3.tekst_2}</td>
+  </tr>
+  </table>
+  </div>
+  
+  <button class="accordion">Overskrift?
+  <i class="fa-solid fa-caret-down"></i>
+  </button>
+  <div class="accordion-content">
+  <p>Indhold</p>
+  </div>
+  
+  <button class="accordion">Overskrift?
+  <i class="fa-solid fa-caret-down"></i>
+  </button>
+  <div class="accordion-content">
+  <p>Indhold</p>
+  </div>
+  
+  <button class="accordion">Overskrift?
+  <i class="fa-solid fa-caret-down"></i>
+  </button>
+  <div class="accordion-content">
+  <p>Indhold</p>
+  </div>
+  
+  </section>
+  `
+  /*kalder accordion funktionen her får at få dem til at virke. da koden ellers kører før data er hentet ned */
+  startAccodion();
+}
+
+
+
+
+
 //
 //JS Accordion
 //
 // rammer alle med querySelectorAll med class accordion .forEach loop kører for hver knap/button tilføjes en EventListener der lytter efter klik på button.//
+function startAccodion(){
 document.querySelectorAll(".accordion").forEach(button => {
     button.addEventListener("click", ()=>{
         //erklære at accodionContent er det næste element ved siden af, her vores indhold under knappen.//
@@ -76,25 +249,8 @@ document.querySelectorAll(".accordion").forEach(button => {
         }
     });
     });
-
-
-
-
-/*Indsætter indhold på priser siden */
-const prisData = document.querySelector(".priserData")
-function renderActivities(data) {
-    const prisData =data[0]
-        AktivitetIndhold.innerHTML += `
-          <h1 class="overskrift">${activite.acf.titel}</h1>
-          <img src="${activite.acf.sektion_1.billede_desktop.url}" alt="">
-          <p class="beskrivelse">${activite.acf.sektion_1.beskrivelse}</p>
-        `
-}
-
-
-
-
-
+  }
+  startAccodion();
 
 
 
