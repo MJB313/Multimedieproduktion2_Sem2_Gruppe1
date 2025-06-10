@@ -2212,12 +2212,7 @@ main {
     display: none;
 }
 
-.z_layout img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-    border-radius: var(--border_radius_buttons);
-}
+/* Z-layout styling - START */
 
 .z_layout {
     display: flex;
@@ -2234,10 +2229,26 @@ main {
 }
 
 .z_layout .text_section {
-    width: 100%; }
+    width: 100%;
+}
+
+/* Z-layout styling - SLUT */
 
 .overnatning_h2 {
     margin-top: var(--text_spacer_mobile);
+}
+
+/* Card styling - START */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: white;
+    border-radius: var(--border_radius_buttons);
+    overflow: visible;
+    width: 100%;
 }
 
 .card img {
@@ -2247,22 +2258,13 @@ main {
     border-radius: var(--border_radius_buttons);
 }
 
-.button-link {
-    background-color: var(--green);
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    color: white;
-    border-radius: var(--border_radius_buttons);
-    padding: 0.5rem 1rem;
-    max-width: 100%;
-    margin: 1rem 0 auto;
-    font-size: var(--card_button_text_mobile);
-}
-
-.card {
-    width: 100%;
-    align-items: center;
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
 }
 
 .card_title {
@@ -2279,6 +2281,7 @@ main {
 .icon-text {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .card p {
@@ -2293,7 +2296,6 @@ main {
     text-overflow: ellipsis;
 }
 
-
 .card_wrapper {
     grid-template-columns: 1fr;
     gap: var(--sektion_spacer_mobile);
@@ -2304,6 +2306,10 @@ main {
     margin-bottom: 1rem;
 }
 
+/* Card styling - SLUT */
+
+
+/* Modal styling - START */
 
 .hytte_preview {
     display: none;
@@ -2332,21 +2338,23 @@ main {
     margin-bottom: var(--sektion_spacer_mobile);
 }
 
-.modal-box p, .text-content p, .modal-box li {
+.modal-box p,
+.text-content p,
+.modal-box li {
     font-size: var(--p_mobile);
 }
 
 .modal-box h3,
-.modal-box p, .modal-box li {
+.modal-box p,
+.modal-box li {
     margin-bottom: var(--text_spacer_mobile);
-   }
+}
 
 .modal-box ul {
     padding-left: 0;
     padding-right: 0;
     list-style-position: inside;
 }
-
 
 .hytte_preview img {
     width: 100%;
@@ -2359,33 +2367,45 @@ main {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    cursor: pointer; }
-    
+    cursor: pointer;
+}
+
 .image-container i {
     margin-bottom: 1rem;
 }
 
-.icon-text {
-    gap: 0.5rem;
+.ankomst_info p:first-child {
+    margin-top: var(--text_spacer_desktop);
 }
 
-.image-content, .text-content {
-    width: 100%;
-    order: unset;
+.button-link {
+        text-decoration: none;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: var(--green);
+        border-radius: var(--border_radius_buttons);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "quicksand", sans-serif;
+        font-weight: var(--fs_bold);
+        display: block;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        font-size: var(--card_button_text_mobile);
 }
 
+/* Modal styling - SLUT */
 
 @media screen and (min-width: 999px) {
-    
     main {
         margin-inline: 150px;
     }
+
+    /* Breadcrumb styling - START */
 
     ul.breadcrumb {
         display: block;
         padding: 1rem var(--generalSpacer);
         list-style: none;
-        background-color: white;
         background-color: var(--darkOrange);
         justify-content: start;
         width: 100%;
@@ -2415,22 +2435,24 @@ main {
 
     .breadcrumb li:first-child a:hover {
         color: black;
-        text-decoration: underline;   }
+        text-decoration: underline;
+    }
+
+    /* Breadcrumb styling - SLUT */
+
+    /* Card Styling Desktop - START */
     
+
     .card img {
-        width: 100%;
         height: 381px;
-        object-fit: cover;
-        border-radius: var(--border_radius_buttons);
-    }  
-    
+    }
+
     .card {
         width: 324px;
     }
-    
+
     .card_title {
         font-size: var(--fs_h3_desktop);
-        font-weight: var(--fs_bold);
     }
 
     .card i {
@@ -2439,19 +2461,15 @@ main {
     }
 
     .icon-text {
-        display: flex;
-        align-items: center;
-        gap: 1rem;   }
-    
-    
+        gap: 1rem;
+    }
+
     .card p {
         font-size: var(--p_desktop);
         margin-bottom: 1rem;
-        max-width: 100%;
     }
-    
-    
-        .card_wrapper {
+
+    .card_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: var(--text_spacer_desktop);
@@ -2459,86 +2477,80 @@ main {
     }
 
     .button-link {
-        background-color: var(--green);
-        text-decoration: none;
-        display: block;
-        text-align: center;
-        color: white;
-        border-radius: var(--border_radius_buttons);
-        padding: 0.5rem 1rem;
         font-size: var(--card_button_text_desktop);
-        max-width: 50%;   
+        max-width: 50%;
     }
 
-        .intro-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-        }
-    
-        .image-content {
-            order: 2;
-        }
-    
-        .text-content {
-            order: 1;  
-        }
-    
-        .image-content,
-        .text-content {
-            width: 50%;           
-        }
-
-        .z_layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--gap);
-            margin-bottom: var(--sektion_spacer_desktop);
-        }
-
-        .z_layout img {
-            order: 0;
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: var(--border_radius_buttons);
-        }
-
-        .z_layout a {
-            text-decoration: none;
-            color: white;
-            padding: 1rem 2rem;
-            background-color: var(--green);
-            border-radius: var(--border_radius_buttons);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-            font-family: "quicksand", sans-serif;
-            font-weight: var(--fs_bold);
-            display: inline-block;
-            transition: 0.3s ease-in-out;
-        }
-
-        .z_layout a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-        }
-
-        @media screen and (max-width: 1270px) {
-            .z_layout {
-                grid-template-columns: 1fr;
-            }
-
-            .z_layout img:nth-child(even) {
-                grid-row: 1;
-            }
-
-            .z_layout a {
-                display: block;
-                text-align: center;
-            }         }
-
+    .button-link:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);   
     }
-    
+
+    /* Card Styling Desktop - SLUT */
+
+    /* Første tekst sektion inde på modalet - START */
+    .intro-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    /* Første tekst sektion inde på modalet - SLUT */
+
+    /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - START */
+    .image-content {
+        order: 2;
+        width: 50%;
+    }
+
+    .text-content {
+        order: 1;
+        width: 50%;
+    }
+
+    .text-content h3 {
+        margin-bottom: var(--text_spacer_desktop);
+    }
+    /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - SLUT */
+
+
+    /* Z-layout styling - START */
+
+    .z_layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap);
+        margin-bottom: var(--sektion_spacer_desktop);
+    }
+
+    .z_layout img {
+        order: 0;
+        height: 420px;
+        object-position: center;
+    }
+
+    .z_layout a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: var(--green);
+        border-radius: var(--border_radius_buttons);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "quicksand", sans-serif;
+        font-weight: var(--fs_bold);
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+    }
+
+    .z_layout a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    }
+}
+
+   /* Z-layout - SLUT */
+
+
+
 
 
 
