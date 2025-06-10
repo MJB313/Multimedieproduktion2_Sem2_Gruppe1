@@ -649,6 +649,9 @@ footer a:hover {
     display: none;
 }
 
+.navLinks { 
+    top: 80px;
+}
 
 
   h1 {
