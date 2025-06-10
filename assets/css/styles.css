@@ -1111,6 +1111,7 @@ input{
 .submit {
   border: none;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 .submit:hover{
