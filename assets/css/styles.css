@@ -1342,6 +1342,77 @@ input{
   margin-block: 1rem;
 
 }  
+
+
+
+.card img {
+        height: 381px;
+    }
+
+    .card {
+        width: 324px;
+    }
+
+    .card_title {
+        font-size: var(--fs_h3_desktop);
+    }
+
+    .card i {
+        font-size: 2rem;
+        width: 40px;
+    }
+
+    .icon-text {
+        gap: 1rem;
+    }
+
+    .card p {
+        font-size: var(--p_desktop);
+        margin-bottom: 1rem;
+    }
+
+    .card_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--text_spacer_desktop);
+        justify-content: center;
+    }
+
+    .button-link {
+        font-size: var(--card_button_text_desktop);
+        max-width: 50%;
+    }
+
+    .button-link:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);   
+    }
+
+    /* Card Styling Desktop - SLUT */
+
+    /* Første tekst sektion inde på modalet - START */
+    .intro-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    /* Første tekst sektion inde på modalet - SLUT */
+
+    /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - START */
+    .image-content {
+        order: 2;
+        width: 50%;
+    }
+
+    .text-content {
+        order: 1;
+        width: 50%;
+    }
+
+    .text-content h3 {
+        margin-bottom: var(--text_spacer_desktop);
+    }
+    /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - SLUT */
 }
 
 /* PRAKTISK INFORMATION STYLES HER */
