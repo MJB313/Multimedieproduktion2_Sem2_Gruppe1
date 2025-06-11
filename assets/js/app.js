@@ -3,10 +3,12 @@
 const domain ="https://mmd2.jqt-website.com/";
 const postsEndpoint = "wp-json/wp/v2/posts";
 const getRealImageUrls = "&acf_format=standard";
-
+/*asynkron kode der kan køre på samme tid som resten af js koden, så der ikke skal ventes på at alt data hentes først, inden der læses videre i koden. await gør at der skal vendes på at alt data er hentet før funktionen fortsætter. */
 async function getData(){
     const res =await fetch(domain +postsEndpoint);
+    /* det hentede data gemmes i datawordpress, dette er også asynkront, så her anvendes await også for at vente på at vi har alt data inden det returenes som JSON */
     const dataWordpress = await res.json();
+    /*logger data i consolen så vi kan se den */
     console.log('dataWordpress:', dataWordpress)
     return dataWordpress;
 }
@@ -30,7 +32,9 @@ const sektionPriser = document.querySelector(".priserData")
 // if(prisData)
 function renderPriser(data) {
   console.log('data:', data)
+  /*Vi er kun interesset i det første objekt og derfor gemmer vi dette i prisData som data[0], vi rammer her det første. */
   const prisData =data[0];
+  /*med innerHTML indsætter vi følgende html ved class ="priserData" */
   sektionPriser.innerHTML += `
   <h1>${prisData.acf.titel}</h1>
   <section class="z_layout">
@@ -462,7 +466,7 @@ function renderPriser(data) {
   
   </section>
   `
-  /*kalder accordion funktionen her får at få dem til at virke. da koden ellers kører før data er hentet ned */
+  /*kalder accordion funktionen her får at få den til at virke. da koden ellers kører før data er hentet ned */
   startAccodion();
 }
 
