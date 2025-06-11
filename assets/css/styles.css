@@ -113,12 +113,12 @@ section {
 
 /* z layout */
 
-.z_layout {
+.z_layout{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--gap);
-
+  gap: var(--text_spacer_desktop);
 }
+
 
 .z_layout img {
   width: 100%;
@@ -414,6 +414,22 @@ ul li ul.dropdown.showDropdown {
  .tilbudSektionForsiden .tilbudKnapForsiden {
   margin-left: 5rem;
  } 
+section.card_wrapper{
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+ .card_wrapper .card p{
+  font-size: var(--p_mobile);
+}
+ .card_wrapper .card h3{
+  font-size: var(--fs_h3_mobile);
+}
+ .card_wrapper .card a{
+  font-size: var(--p_mobile);
+}
+
+
+
 
 }
 
@@ -975,7 +991,7 @@ ul.breadcrumb li a {
 
 .card {
   width: 100%;
-  align-items: center;
+
 }
 
 .card_title {
@@ -985,62 +1001,21 @@ ul.breadcrumb li a {
 }
 
 .card p {
-  font-size: var(--p_desktop);
   margin-bottom: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: var(--p_desktop);
+}
+
+.card i{
+  font-size: 1.5rem;
 }
 
 .card_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--sektion_spacer_desktop);
+  gap: clamp(2rem,5vw,5rem);
 }
 
-@media screen and (max-width: 999px) {
-  .card img {
-    width: 254px;
-    height: 330px;
-    object-fit: cover;
-  }
 
-  .button-link {
-    background-color: var(--green);
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    color: white;
-    border-radius: var(--border_radius_buttons);
-    padding: 0.5rem 1rem;
-    max-width: 254px;
-    margin: 1rem 0 auto;
-    font-size: var(--card_button_text_mobile);
-  }
-
-  .card {
-    width: 347px;
-  }
-
-  .card_title {
-    font-size: var(--fs_h3_mobile);
-    font-weight: var(--fs_bold);
-  }
-
-  .card p {
-    font-size: var(--p_mobile);
-    margin-bottom: 0.5rem;
-    max-width: 254px;
-  }
-
-  .card_wrapper {
-    grid-template-columns: 1fr;
-    gap: var(--sektion_spacer_mobile);
-  }
-
-
-
-
-}
 
 /* LEGEPLADS KODES HER */
 
@@ -1133,6 +1108,10 @@ input{
 /* OVERNATNING KODES HER */
 
 
+.breadcrumb {
+    display: none;
+}
+
 
 
 .overnatning_h2 {
@@ -1173,34 +1152,18 @@ input{
     font-weight: var(--fs_bold);
 }
 
-.card i {
-    font-size: 1rem;
-    width: 25px;
-    margin-bottom: 0.25rem;
-}
 
 .icon-text {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
 }
 
-.card p {
-    font-size: var(--p_mobile);
-    margin-bottom: 0.5rem;
-    max-width: 100%;
+.intro-container {
+  order: 1;
 }
 
-.shortend {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
-.card_wrapper {
-    grid-template-columns: 1fr;
-    gap: var(--sektion_spacer_mobile);
-}
+
 
 .card a {
     max-width: 100%;
@@ -1279,6 +1242,149 @@ input{
     margin-top: var(--text_spacer_desktop);
 }
 
+.button-link {
+        text-decoration: none;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: var(--green);
+        border-radius: var(--border_radius_buttons);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "quicksand", sans-serif;
+        font-weight: var(--fs_bold);
+        display: block;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        font-size: var(--card_button_text_mobile);
+}
+
+/* Modal styling - SLUT */
+
+@media screen and (min-width: 999px) {
+    main {
+        margin-inline: 150px;
+    }
+
+    /* Breadcrumb styling - START */
+
+    ul.breadcrumb {
+        display: block;
+        padding: 1rem var(--generalSpacer);
+        list-style: none;
+        background-color: var(--darkOrange);
+        justify-content: start;
+        width: 100%;
+    }
+
+    ul.breadcrumb li {
+        display: inline;
+        font-size: var(--fs-text);
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 1rem;
+        color: black;
+        content: ">\00a0";
+        font-weight: var(--fs_bold);
+    }
+
+    ul.breadcrumb li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .breadcrumb li:last-child a {
+        font-weight: var(--fs_bold);
+        text-decoration: underline;
+    }
+
+    .breadcrumb li:first-child a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    /* Breadcrumb styling - SLUT */
+
+    /* Card Styling Desktop - START */
+    
+
+    .card img {
+        height: 381px;
+    }
+
+
+    .card_title {
+        font-size: var(--fs_h3_desktop);
+    }
+
+    .icon-text {
+        gap: 1rem;
+    }
+
+
+
+    .card_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    .button-link {
+        font-size: var(--card_button_text_desktop);
+        max-width: 50%;
+    }
+
+    .button-link:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);   
+    }
+
+    /* Card Styling Desktop - SLUT */
+
+    /* Første tekst sektion inde på modalet - START */
+    .intro-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+
+    }
+    /* Første tekst sektion inde på modalet - SLUT */
+
+    /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - START */
+
+
+    .text-content h3 {
+        margin-bottom: var(--text_spacer_desktop);
+    }
+    /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - SLUT */
+
+
+    /* Z-layout styling - START */
+
+
+
+
+
+    .z_layout a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem 2rem;
+        background-color: var(--green);
+        border-radius: var(--border_radius_buttons);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        font-family: "quicksand", sans-serif;
+        font-weight: var(--fs_bold);
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+    }
+
+    .z_layout a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    }
+}
+
+   /* Z-layout - SLUT */
+
 
 /* PETANQUE KODES HER */
 
@@ -1323,10 +1429,6 @@ input{
   }
 
 
-  p {
-    font-size: var(--p_desktop);
-  }
-
   /*Praktisk Information - accordion*/
 
   .accordion-content p {
@@ -1349,33 +1451,23 @@ input{
         height: 381px;
     }
 
-    .card {
-        width: 324px;
-    }
 
     .card_title {
         font-size: var(--fs_h3_desktop);
     }
 
-    .card i {
-        font-size: 2rem;
-        width: 40px;
-    }
+
 
     .icon-text {
         gap: 1rem;
     }
 
-    .card p {
-        font-size: var(--p_desktop);
-        margin-bottom: 1rem;
-    }
+
 
     .card_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--text_spacer_desktop);
-        justify-content: center;
+
     }
 
     .button-link {
@@ -1395,19 +1487,11 @@ input{
         display: flex;
         align-items: flex-start;
         gap: 2rem;
+        flex-direction: row-reverse;
     }
     /* Første tekst sektion inde på modalet - SLUT */
 
     /* Rækkefølge af billede og tekst ændret på desktop version for at følge mock-up design - START */
-    .image-content {
-        order: 2;
-        width: 50%;
-    }
-
-    .text-content {
-        order: 1;
-        width: 50%;
-    }
 
     .text-content h3 {
         margin-bottom: var(--text_spacer_desktop);
