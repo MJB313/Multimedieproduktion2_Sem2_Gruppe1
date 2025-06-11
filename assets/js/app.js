@@ -499,86 +499,88 @@ document.querySelectorAll(".accordion").forEach(button => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Fanger elementerne
-
-const burger = document.querySelector(".burger");
-const navLinks = document.querySelector(".navLinks");
-
-
-// Opsætter en event listener på vores burger menu, som har en klikfunktion, der tpggæer imellem at tilføje / fjerne en klasse.
-burger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // Fanger elementerne
+  
+  const burger = document.querySelector(".burger");
+  const navLinks = document.querySelector(".navLinks");
+  
+  
+  // Opsætter en event listener på vores burger menu, som har en klikfunktion, der tpggæer imellem at tilføje / fjerne en klasse.
+  burger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
 });
 
 
@@ -609,3 +611,22 @@ if (omCampingpladsen) {
     }
   });
 }
+
+//Vis brugeren hvor de er henne på siden.
+
+//den aktuelle url findes ved hjælp af window.location.href; så den variabel har vi sat til denneUrl.
+const  denneUrl = window.location.href;
+// fanger alle a elementer i nav
+const nav = document.querySelectorAll("nav ul li a");
+
+//hvis et link passer med url tilføjes class= aktiv
+//loop igennem alle links
+nav.forEach(function(link){
+// hvis href er lig med den aktuelle url
+if (link.href === denneUrl){
+  // hvis true tilføjes class=aktiv
+  link.classList.add("aktiv");
+  console.log('link:', link)
+}
+});
+// dette betyder at der tilføjes class aktiv til det a som passer med den url man er på. der kører altså et loop for at se om det er sandt at link.href er lig med den url man er på lige nu. det giver css stylingen blandt andet underline, så brugeren kan se hvilken side de er på.
