@@ -135,10 +135,11 @@ function renderPriser(data) {
   <p>
   ${prisData.acf.sektion_5.beskrivelse}
   </p>
+    <a href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1">${prisData.acf.sektion_5.knap}</a>
   </div>
   <img src="${prisData.acf.sektion_5.billede_desktop.url}"
   alt="${prisData.acf.sektion_5.billede_desktop.alt}" />
-  <a href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1">${prisData.acf.sektion_5.knap}</a>
+
   </section>
   <section>
   

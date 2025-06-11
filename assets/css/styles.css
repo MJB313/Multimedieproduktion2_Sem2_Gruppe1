@@ -851,6 +851,10 @@ width: 45px;
   padding: var(--text_spacer_mobile);
  }
 
+ td, th{
+font-size: 13px;
+}
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1289,3 +1293,36 @@ font-weight: var(--fs_bold);
 
 
 /* PRISER STYLES HER */
+
+/*styling af tabel*/
+table, th, td{
+    border: 1px solid black;
+}
+
+td, th{
+  padding: 0.5rem;
+font-family: "quicksand",
+sans-serif;
+}
+
+tr:nth-child(even){
+  background-color: #eeeeee;
+}
+
+table{
+    width: 100%;
+    padding: 1rem;
+}
+th{
+    text-align: start;
+}
+
+.accordion:nth-of-type(1) {
+  border-top-left-radius: var(--border_radius_buttons);
+  border-top-right-radius: var(--border_radius_buttons);
+}
+
+.accordion:nth-last-of-type(1) {
+  border-bottom-left-radius: var(--border_radius_buttons);
+  border-bottom-right-radius: var(--border_radius_buttons);
+}
