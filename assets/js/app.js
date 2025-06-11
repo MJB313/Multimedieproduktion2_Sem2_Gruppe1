@@ -27,6 +27,44 @@ async function init() {
 init()
 
 
+// Fanger elementerne
+const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".navLinks");
+
+// Opsætter en event listener på vores burger menu, som har en klikfunktion, der toggler imellem at tilføje / fjerne en klasse.
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Fanger elementer til dropdown menu for aktiviteter
+const aktiviteter = document.querySelector(".aktiviteter");
+const aktiviteterDropdown = aktiviteter.querySelector(".dropdown");
+
+// Tjekker om aktiviteter findes – hvis ja, så sætter vi en event listener på, som kun virker, hvis der er mindre end 1400 px på vinduet.
+// Vi bruger preventDefault så siden ikke opdateres, og toggler klassen "showDropdown".
+if (aktiviteter && aktiviteterDropdown) {
+  aktiviteter.addEventListener("click", (e) => {
+    if (window.innerWidth <= 1400) {
+      aktiviteterDropdown.classList.toggle("showDropdown");
+    }
+  });
+}
+
+// Fanger elementer til dropdown menu for "Om campingpladsen"
+const omCampingpladsen = document.querySelector(".omCampingpladsen");
+const omCampingDropdown = omCampingpladsen.querySelector(".dropdown");
+
+// Samme funktionalitet som ovenfor
+if (omCampingpladsen && omCampingDropdown) {
+  omCampingpladsen.addEventListener("click", (e) => {
+    if (window.innerWidth <= 1400) {
+      omCampingDropdown.classList.toggle("showDropdown");
+    }
+  });
+}
+
+
+
 /*Indsætter indhold på priser siden */
 const sektionPriser = document.querySelector(".priserData")
 // if(prisData)
@@ -498,46 +536,6 @@ document.querySelectorAll(".accordion").forEach(button => {
   }
   startAccodion();
 
-  
-  
-  
-// Fanger elementerne
-const burger = document.querySelector(".burger");
-const navLinks = document.querySelector(".navLinks");
-
-// Opsætter en event listener på vores burger menu, som har en klikfunktion, der toggler imellem at tilføje / fjerne en klasse.
-burger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-
-// Fanger elementer til dropdown menu for aktiviteter
-const aktiviteter = document.querySelector(".aktiviteter");
-const aktiviteterDropdown = aktiviteter.querySelector(".dropdown");
-
-// Tjekker om aktiviteter findes – hvis ja, så sætter vi en event listener på, som kun virker, hvis der er mindre end 1400 px på vinduet.
-// Vi bruger preventDefault så siden ikke opdateres, og toggler klassen "showDropdown".
-if (aktiviteter && aktiviteterDropdown) {
-  aktiviteter.addEventListener("click", (e) => {
-    if (window.innerWidth <= 1400) {
-      e.preventDefault();
-      aktiviteterDropdown.classList.toggle("showDropdown");
-    }
-  });
-}
-
-// Fanger elementer til dropdown menu for "Om campingpladsen"
-const omCampingpladsen = document.querySelector(".omCampingpladsen");
-const omCampingDropdown = omCampingpladsen.querySelector(".dropdown");
-
-// Samme funktionalitet som ovenfor
-if (omCampingpladsen && omCampingDropdown) {
-  omCampingpladsen.addEventListener("click", (e) => {
-    if (window.innerWidth <= 1400) {
-      e.preventDefault();
-      omCampingDropdown.classList.toggle("showDropdown");
-    }
-  });
-}
 
 
 
@@ -562,3 +560,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
