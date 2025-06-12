@@ -935,6 +935,13 @@ input {
   background-color: var(--accordionbackground);
   border: solid 1px black;
 }
+.accordion-content ul {
+  list-style-position: inside;
+}
+
+.accordion-content span {
+  padding-left: 2rem;
+}
 
 /*class =open der i JS bliver tilføjet ved klik på knappen. Så denne CSS regel gælder for en button/knap med begge class*/
 .accordion-content.open {
@@ -982,6 +989,7 @@ input {
   margin-block: 1rem;
   font-family: "quicksand", sans-serif;
   font-weight: var(--fs_medium);
+  font-size: var(--p_desktop);
 }
 
 .accordion-section {
@@ -1019,6 +1027,11 @@ input {
 /* ___________________________________________________________________________ */
 
 /* PRISER STYLES HER */
+
+.accordion.open:nth-last-of-type(1){
+  border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
 
 /*styling af tabel*/
 table,
@@ -1506,6 +1519,7 @@ th {
 
   .accordion-content ul li {
     margin-block: 1rem;
+    font-size: var(--p_mobile);
   }
 
   main .accordion {
