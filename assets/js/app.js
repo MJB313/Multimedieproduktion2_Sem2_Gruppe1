@@ -67,7 +67,7 @@ if (omCampingpladsen && omCampingDropdown) {
 
 /*Indsætter indhold på priser siden */
 const sektionPriser = document.querySelector(".priserData")
-// if(prisData)
+
 function renderPriser(data) {
   console.log('data:', data)
   /*Vi er kun interesset i det første objekt og derfor gemmer vi dette i prisData som data[0], vi rammer her det første. */
@@ -144,6 +144,7 @@ function renderPriser(data) {
   <img
   src="${prisData.acf.sektion_4.billede_desktop.url}"
   alt="egense strand camping solnedgang over Limfjorden"
+  loading="lazy"
   />
   <div class="text_section">
   <h2>${prisData.acf.sektion_4.overskrift}</h2>
@@ -177,7 +178,9 @@ function renderPriser(data) {
     <a href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1">${prisData.acf.sektion_5.knap}</a>
   </div>
   <img src="${prisData.acf.sektion_5.billede_desktop.url}"
-  alt="${prisData.acf.sektion_5.billede_desktop.alt}" />
+  alt="${prisData.acf.sektion_5.billede_desktop.alt}" 
+  loading="lazy"
+  />
 
   </section>
   <section>
