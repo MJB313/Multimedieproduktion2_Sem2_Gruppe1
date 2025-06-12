@@ -416,7 +416,7 @@ main {
 
 /* Z-layout styling - START */
 
-.z_layout {
+/* .z_layout {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -432,7 +432,7 @@ main {
 
 .z_layout .text_section {
     width: 100%;
-}
+} */
 
 /* Z-layout styling - SLUT */
 
@@ -625,7 +625,7 @@ main {
 
     /* Z-layout styling - START */
 
-    .z_layout {
+    /* .z_layout {
         display: grid;
         grid-template-columns: repeat(3, minmax(324px, 1fr));
         gap: var(--gap);
@@ -654,7 +654,7 @@ main {
     .z_layout a:hover {
         transform: scale(1.1);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
-    }
+    } */
 
 
 /* Z-layout - SLUT */
