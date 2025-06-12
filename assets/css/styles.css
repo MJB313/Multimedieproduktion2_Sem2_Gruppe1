@@ -575,17 +575,59 @@ footer a:hover {
   margin: 0 auto;
 }
 
+.arrowWrapper{
+  position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+}
+
+.arrowWrapper a {
+  color: white;
+  font-family: "quicksand", sans-serif;
+    font-size: var(--p_desktop);
+    background-color: var(--green);
+    padding: 0.75rem 1rem 0.85rem 1rem;
+    border-radius: 50px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    scroll-behavior: smooth;  
+  }
 
 .arrow{
-position: absolute;
-bottom: ;
-
+animation-name: pil;
+animation-duration: 3s;
+animation-delay: 0.5s;
+animation-iteration-count: infinite;
 }
 
 .arrow i {
-  font-size: 2rem;
+  font-size: 3rem;
   color: white;
+
 }
+
+
+
+@keyframes pil {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(0);
+
+  }
+
+  100% {
+    transform: translateY(-100%);
+
+  }
+
+}
+
 
 /*Tilbudssektion - Forsiden*/
 .tilbudSektionForsiden {
@@ -697,6 +739,13 @@ ul.breadcrumb {
   font-family: "quicksand", sans-serif;
   /*sætter punktopstillingen på linje med teksten*/
   list-style-position: inside;
+  margin-bottom: 0.3rem;
+}
+
+.fremgangsmaede li {
+  list-style-position: inside;
+  font-family: "quicksand", sans-serif;
+  margin-bottom: 0.3rem;
 }
 
 /* ___________________________________________________________________________ */
@@ -1027,22 +1076,7 @@ th {
   }
 }
 
-@media screen and (max-width: 1270px) {
-  .z_layout {
-    grid-template-columns: 1fr;
-  }
 
-  .z_layout img:nth-child(even) {
-    grid-row: 1;
-  }
-
-  .z_layout a {
-    display: block;
-    text-align: center;
-  }
-
-  /* Generelt styling slut*/
-}
 
 /* ______________________________________________________________________________________________________ */
 
@@ -1205,7 +1239,27 @@ th {
     margin-left: 5rem;
   }
 
-  /* Forside færdig */
+  /* Forside færdig */ 
+}
+
+/* ____________________________________________________________________________________________________________ */
+
+
+@media screen and (max-width: 1270px) {
+  .z_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .z_layout img:nth-child(even) {
+    grid-row: 1;
+  }
+
+  .z_layout a {
+    display: block;
+    text-align: center;
+  }
+
+  /* Generelt styling slut*/
 }
 
 /* ____________________________________________________________________________________________________________ */
@@ -1378,6 +1432,10 @@ th {
   .containerHeroImage .pHeroForside {
     font-size: 1.5rem;
     padding-top: 8.5rem;
+  }
+
+  .arrowWrapper { 
+    display: none;
   }
 
   footer {
