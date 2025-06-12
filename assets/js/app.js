@@ -77,6 +77,7 @@ function renderPriser(data) {
   <h1>${prisData.acf.titel}</h1>
   <section class="z_layout">
   <div class="text_section">
+  <h2>Hvad er inkluderet hos os?</h2>
   <p>
   ${prisData.acf.sektion_1.beskrivelse}
   <br><br>

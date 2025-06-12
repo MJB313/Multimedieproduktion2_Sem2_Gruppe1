@@ -963,6 +963,9 @@ ul.breadcrumb {
 font-size: 13px;
 }
 
+
+
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1130,26 +1133,23 @@ ul.breadcrumb li a {
 
 /* OM OS KODES HER */
 
-#textinput {
-  height: 8rem;
-}
 
-.text_section div a{
+
+.z_layout .text_section .kontaktOmOsSide a{
   background-color: white;
   box-shadow: none;
   color: black;
   text-align: left;
-  border-radius: 0;
-  transition: none;
   text-decoration: none;
   padding: 1rem 0;
-}
-
-.text_section div a:hover{
+} 
+.z_layout .text_section .kontaktOmOsSide a:hover{
 transform: scale(1);
-box-shadow: none;
 text-decoration: underline;
 }
+
+
+
 
 form {
   display: grid;
@@ -1168,8 +1168,12 @@ form label{
   margin-bottom: 0.2rem;
 }
 
-#textinput {
+#formTextinput {
   grid-column: 1/-1;
+}
+
+#formTextinput input {
+  padding-block:4rem;
 }
 
 input{
@@ -1193,7 +1197,6 @@ input{
   font-weight: var(--fs_bold);
   padding-block: 1rem;
 }
-
 
 
 
