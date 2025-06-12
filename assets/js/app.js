@@ -9,7 +9,6 @@ async function getData(){
     /* det hentede data gemmes i datawordpress, dette er også asynkront, så her anvendes await også for at vente på at vi har alt data inden det returenes som JSON */
     const dataWordpress = await res.json();
     /*logger data i consolen så vi kan se den */
-    console.log('dataWordpress:', dataWordpress)
     return dataWordpress;
 }
 getData();
@@ -69,7 +68,6 @@ if (omCampingpladsen && omCampingDropdown) {
 const sektionPriser = document.querySelector(".priserData")
 
 function renderPriser(data) {
-  console.log('data:', data)
   /*Vi er kun interesset i det første objekt og derfor gemmer vi dette i prisData som data[0], vi rammer her det første. */
   const prisData =data[0];
   /*med innerHTML indsætter vi følgende html ved class ="priserData" */
