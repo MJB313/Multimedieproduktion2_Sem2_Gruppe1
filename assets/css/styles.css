@@ -189,6 +189,7 @@ section {
   right: 0;
   z-index: 9999;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 120px;
 }
 
 .globalNavigation img {
@@ -199,12 +200,18 @@ section {
   list-style-type: none;
   display: flex;
   align-items: center;
+  gap: 3rem;
 
 }
 
 .globalNavigation li {
   position: relative;
-  padding-inline: 2rem;
+  display: flex;
+
+}
+
+.navA {
+  padding: 2rem 90% 2rem 10%;
 
 }
 
@@ -242,7 +249,7 @@ ul li ul.dropdown {
   position: absolute;
   z-index: 999;
   left: 0;
-  padding-top: 1rem;
+  padding-top: 2.5rem;
 }
 
 .dropdown li a {
@@ -269,13 +276,17 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 0.2rem;
+}
+
+.nav_menu_mobile button{
+font-size: 12px;
 }
 
 .nav_menu_mobile a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 12px;
+  font-family: "quicksand",
+      sans-serif;
 }
 
 .nav_menu_mobile a i {
@@ -285,11 +296,15 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
 .nav_menu_mobile p {
   color: white;
   margin: 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .aktiviteter {
   cursor: pointer;
+  padding-inline: 10%;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .aktiviteter span {
@@ -297,7 +312,10 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
 }
 
 .omCampingpladsen {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
+  padding-inline: 10%;
 }
 
 .omCampingpladsen span {
@@ -331,6 +349,19 @@ ul li ul.dropdown.showDropdown {
   .globalNavigation li:hover ul.dropdown {
     display: block;
   }
+
+  .navA{
+    box-shadow: none;
+    padding-inline: 0;
+  }
+
+  .aktiviteter { 
+    padding: 0;
+  }
+
+  .omCampingpladsen {
+    padding-inline: 0;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -356,6 +387,7 @@ ul li ul.dropdown.showDropdown {
 
   .globalNavigation ul {
     display: grid;
+    gap: 0;
   }
 
   ul li ul.dropdown li {
@@ -367,9 +399,11 @@ ul li ul.dropdown.showDropdown {
   }
 
   .globalNavigation li {
-    padding-block: 2rem;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2) inset;
   }
+
+
+
 
   .dropdown li a {
     text-align: left;
@@ -439,7 +473,13 @@ section.card_wrapper{
   font-size: var(--p_mobile);
 }
 
+.aktiviteter {
+  padding: 2rem 10% 2rem 10%;
+}
 
+.omCampingpladsen {
+  padding: 2rem 10% 2rem 10%;
+}
 
 
 }
@@ -505,6 +545,11 @@ footer a {
   text-decoration: none;
   color: white;
   font-weight: var(--fs_regular);
+  font-size: var(--p_desktop);
+}
+
+footer span {
+  font-size: var(--p_desktop);
 }
 
 footer a:hover {
@@ -519,6 +564,10 @@ footer a:hover {
   display: flex;
   align-items: stretch;
   gap: 1.5rem;
+}
+
+.linkfooter img {
+  height: 45px;
 }
 
 .smiley_rapport img{
@@ -683,6 +732,10 @@ ul.breadcrumb {
   footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  footer div{
+    margin-bottom: 2rem;
   }
 
   .billedeGalleri {
