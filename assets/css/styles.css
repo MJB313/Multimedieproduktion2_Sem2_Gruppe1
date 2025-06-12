@@ -737,12 +737,21 @@ ul.breadcrumb {
   /*sætter punktopstillingen på linje med teksten*/
   list-style-position: inside;
   margin-bottom: 0.3rem;
+  font-size: var(--p_desktop);
+}
+.opskrift span {
+font-size: var(--p_desktop);
+padding-bottom: 2rem;
 }
 
 .fremgangsmaede li {
   list-style-position: inside;
   font-family: "quicksand", sans-serif;
   margin-bottom: 0.3rem;
+  font-size: var(--p_desktop);
+}
+.fremgangsmaede span {
+  font-size: var(--p_desktop);
 }
 
 /* ___________________________________________________________________________ */
@@ -1695,6 +1704,30 @@ th {
   }
 
   /* Priser slut */
+
+
+
+/* Muslinge safari */
+
+.opskrift li {
+  font-size: var(--p_mobile);
+}
+
+.opskrift span {
+  font-size: var(--p_mobile);
+}
+
+.fremgangsmaede li {
+  font-size: var(--p_mobile);
+}
+
+.fremgangsmaede span {
+  font-size: var(--p_mobile);
+}
+
+
+
+
 }
 
 /* ______________________________________________________________________________________________________ */

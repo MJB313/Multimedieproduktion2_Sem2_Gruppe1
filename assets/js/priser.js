@@ -46,15 +46,15 @@ function renderPriser(data) {
   <h2>${prisData.acf.sektion_2.overskrift}</h2>
   <p>
   <span class="bold">${prisData.acf.sektion_2.underoverskrift}</span>
-  ${prisData.acf.sektion_2.beskrivelse}
+  ${prisData.acf.sektion_2.beskrivelse}.
   <span class="bold">Inkluderet:</span>
-  ${prisData.acf.sektion_2.Inkluderet_indhold}
+  ${prisData.acf.sektion_2.Inkluderet_indhold}.
   <br>
   <span class="bold">Priser:</span>
   ${prisData.acf.sektion_2.beskrivelse_Kopier}
   <br>
   <span class="bold">Bemærk:</span>
-  ${prisData.acf.sektion_2.beskrivelse_Kopier2}
+  ${prisData.acf.sektion_2.beskrivelse_Kopier2}.
   </p>
   <a
   href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1"
@@ -67,16 +67,16 @@ function renderPriser(data) {
   <h2>${prisData.acf.sektion_3.overskrift}</h2>
   <p>
   <span class="bold">Indhold:</span>
-  ${prisData.acf.sektion_3.beskrivelse}
+  ${prisData.acf.sektion_3.beskrivelse}.
   <br>
   <span class="bold">Pris:</span>
-  ${prisData.acf.sektion_3.beskrivelse_Kopier}
+  ${prisData.acf.sektion_3.beskrivelse_Kopier}.
   <br>
   <span class="bold">Inkluderet:</span>
-  ${prisData.acf.sektion_3.Inkluderet_indhold}
+  ${prisData.acf.sektion_3.Inkluderet_indhold}.
   <br>
   <span class="bold">Bemærk:</span>
-  ${prisData.acf.sektion_3.beskrivelse_Kopier2}
+  ${prisData.acf.sektion_3.beskrivelse_Kopier2}.
   </p>
   </div>
   <img
@@ -94,18 +94,18 @@ function renderPriser(data) {
   <h2>${prisData.acf.sektion_4.overskrift}</h2>
   <p>
   <span class="bold">Indhold:</span>
-  ${prisData.acf.sektion_4.beskrivelse}
+  ${prisData.acf.sektion_4.beskrivelse}.
   <br>
   <span class="bold">Pris:</span>
-  ${prisData.acf.sektion_4.beskrivelse_Kopier}
+  ${prisData.acf.sektion_4.beskrivelse_Kopier}.
   <br>
   <span class="bold">Special pris:</span>
-  ${prisData.acf.sektion_4.specialpris}
+  ${prisData.acf.sektion_4.specialpris} <br>
   <span class="bold">Inkluderet:</span>
-  ${prisData.acf.sektion_4.beskrivelse_Kopier2}
+  ${prisData.acf.sektion_4.beskrivelse_Kopier2}.
   <br>
   <span class="bold">Bemærk:</span>
-  ${prisData.acf.sektion_4.beskrivelse_Kopier2}
+  ${prisData.acf.sektion_4.beskrivelse_Kopier2}.
   </p>
   <a
   href="https://booking.egensestrandcamping.dk/daybooking/step1?cId=383&lc=da&wid=1"
@@ -361,16 +361,6 @@ function renderPriser(data) {
    <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_18}</td>
   <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_18}</td>
    </tr>
-   <tr>
-  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_18}</td>
-  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_18}</td>
-  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_18}</td>
-  </tr>
-  <tr>
-  <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_18}</td>
-  <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_18}</td>
-  <td>${prisData.acf.Accordion_3.Kolonne_3.tekst_18}</td>
-  </tr>
   <tr>
   <td>${prisData.acf.Accordion_3.Kolonne_1.tekst_19}</td>
   <td>${prisData.acf.Accordion_3.Kolonne_2.tekst_19}</td>
