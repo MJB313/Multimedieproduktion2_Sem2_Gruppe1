@@ -182,11 +182,19 @@ section {
   padding: 2rem 90% 2rem 10%;
 }
 
+#underline{
+  text-decoration: underline;
+}
+
 .globalNavigation a {
   text-decoration: none;
   color: white;
   font-size: clamp(1rem, 1.2vw, var(--p_desktop));
   font-family: "georgiapro", sans-serif;
+}
+.globalNavigation a:hover {
+  text-decoration: underline;
+
 }
 
 #bookGlobalNav:hover {
@@ -522,6 +530,7 @@ footer a:hover {
 .containerHeroImage {
   display: grid;
   margin-top: 105px;
+  position: relative;
 }
 /*header*/
 .heroBillede {
@@ -564,6 +573,18 @@ footer a:hover {
 
 .forsideMain {
   margin: 0 auto;
+}
+
+
+.arrow{
+position: absolute;
+bottom: ;
+
+}
+
+.arrow i {
+  font-size: 2rem;
+  color: white;
 }
 
 /*Tilbudssektion - Forsiden*/
