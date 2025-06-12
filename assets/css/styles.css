@@ -92,7 +92,7 @@ p {
 }
 
 h1 {
-  margin-block: 200px var(--sektion_spacer_desktop);
+  margin-block: 50px var(--sektion_spacer_desktop);
   text-align: center;
   font-size: var(--fs_h1_desktop);
 }
@@ -492,6 +492,7 @@ footer p {
 .weather {
   display: flex;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .bold {
@@ -657,6 +658,13 @@ width: 45px;
     font-size: 2rem;
 }
 
+ul.breadcrumb {
+  display: block;
+  padding: 1rem var(--generalSpacer);
+  list-style: none;
+  margin-top: 9rem;
+}
+
 @media screen and (max-width: 1000px) {
   .containerHeroImage .h1HeroForside {
     color: white;
@@ -742,6 +750,18 @@ width: 45px;
  main .accordion {
   font-size: 1rem;
   padding: var(--text_spacer_mobile);
+ }
+
+ ul.breadcrumb{
+  display: none;
+ }
+
+ h1 {
+  margin-top: 200px;
+ }
+
+ .weather{
+  margin-block: 1rem;
  }
 
 }
@@ -941,24 +961,18 @@ font-size: 13px;
 
 /* FACILITETER KODER HER */
 
-ul.breadcrumb {
-  margin-top: 2rem;
-  list-style: none;
-  background-color: white;
-  justify-content: start;
-  width: 100%;
-}
 
 ul.breadcrumb li {
   display: inline;
   font-size: var(--fs-text);
+  margin-top: 1rem;
 }
 
 ul.breadcrumb li + li:before {
-  padding: 1rem;
   color: black;
   content: ">\00a0";
   font-weight: var(--fs_bold);
+
 }
 
 ul.breadcrumb li a {
@@ -1042,6 +1056,10 @@ ul.breadcrumb li a {
     display: grid;
 }
 
+.billedeGalleri img {
+  border-radius: var(--border_radius_buttons);
+}
+
 .greytext {
     color: #808080;
     font-family: "georgiapro", sans-serif;
@@ -1117,6 +1135,15 @@ input{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
+.cvrKontakt {
+  font-size: 16px;
+  font-weight: var(--fs_bold);
+  padding-block: 1rem;
+}
+
+
+
+
 /* OMGIVELSER KODES HER */
 
 
@@ -1173,7 +1200,8 @@ input{
 
 .icon-text {
     display: flex;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .intro-container {
@@ -1217,13 +1245,20 @@ input{
     margin: 0 auto var(--sektion_spacer_mobile) auto;
     border-radius: 8px;
     position: relative;
-    margin-bottom: var(--sektion_spacer_mobile);
+    top: 10%;
+
+}
+
+.modal-box section {
+padding-bottom: 0;
 }
 
 .modal-box p,
 .text-content p,
 .modal-box li {
     font-size: var(--p_mobile);
+    font-family: "quicksand",
+        sans-serif;
 }
 
 .modal-box h3,
@@ -1284,14 +1319,6 @@ input{
 
     /* Breadcrumb styling - START */
 
-    ul.breadcrumb {
-        display: block;
-        padding: 1rem var(--generalSpacer);
-        list-style: none;
-        background-color: var(--darkOrange);
-        justify-content: start;
-        width: 100%;
-    }
 
     ul.breadcrumb li {
         display: inline;
@@ -1633,6 +1660,7 @@ tr:nth-child(even){
 table{
     width: 100%;
     padding: 1rem;
+    border-collapse: collapse;
 }
 th{
     text-align: start;
